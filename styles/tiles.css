@@ -1,0 +1,63 @@
+/* Define vars */
+
+:root {
+  --incorrect-color: rgb(92, 92, 92);
+  --semicorrect-color: rgb(173, 173, 47);
+  --correct-color: rgb(2, 158, 2);
+  --tile-background-color: rgb(33, 29, 29)
+}
+
+/* Tiles */
+
+.tile{
+  border: 5px solid black;
+  background-color: rgb(33, 29, 29);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+}
+
+.tile{
+  border: 5px solid black;
+  background-color: rgb(33, 29, 29);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+}
+
+.dark-theme-tile{
+  background-color: white;
+}
+
+.tile::before {
+  content: '';
+  display: block;
+  padding-bottom: 55px;
+  padding-left: 55px;
+}
+
+/* Tile letters */
+
+.tile-letter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Answer colors */
+
+.incorrect{
+  background-color: var(--incorrect-color, gray);
+}
+
+.semicorrect{
+  background-color: var(--semicorrect-color, yellow);
+}
+
+.correct{
+  background-color: var(--correct-color, green);
+}

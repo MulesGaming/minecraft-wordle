@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Minecraft Wordle - Mules Gaming</title>
+    <link rel="icon" type="image/x-icon" href="/media/img/logo.png">
+    <meta name="description" content="A daily Minecraft word game! Inspired by the original wordle.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mules Gaming">
+    <meta charset="UTF-8">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Minecraft Wordle">
+    <meta property="og:url" content="https://www.mulesgaming.com/projects/minecraft-wordle/">
+    <meta property="og:image" content="https://www.mulesgaming.com/media/images/minecraft-wordle/logo.png">
+    <meta property="og:description" content="A daily Minecraft word game! Inspired by the original wordle.">
+    <meta name='og:site_name' content='Mules Gaming'>
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="mulesgaming.com">
+    <meta property="twitter:url" content="https://www.mulesgaming.com/projects/minecraft-wordle/">
+    <meta name="twitter:title" content="Minecraft Wordle">
+    <meta name="twitter:description" content="A daily Minecraft word game! Inspired by the original wordle.">
+    <meta name="twitter:image" content="https://www.mulesgaming.com/media/images/minecraft-wordle/logo.png">  
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/keyboard.css">
+    <link rel="stylesheet" href="/styles/tiles.css">
+    <link rel="stylesheet" href="/styles/menu.css">
+  </head>
+  <body class="body" id="body">
+    <!-- Body area -->
+    <!-- Popup menu(hidden by default) -->
+    <section class="main-menu" id="mainMenu">
+      <div class="top">
+        <h1>Facts about todays word</h1>
+        <!-- Close -->
+        <button class="close-menu-button" id="closeMenu" onclick="minimizeMenu()">X</button>
+      </div>
+      <div class="menu-body">
+        <p class="about-word" id="aboutWord"><!-- JS will insert about here. --></p>
+        <a id="minecraftWikiLink" target="_blank" href="#"><button class="minecraft-wiki-page">Minecraft wiki page about todays word</button></a>
+      </div>
+    </section>
+    <!-- Main everything -->
+    <main class="main" id="main">
+    <!-- Menu Icons -->
+    <section class="menu-icons" id="menuIconContanier">
+      <div class="theme-switcher"><a class="theme-switcher-text" id="themeSwitcherText" href="?theme=dark">dark mode</a></div>
+      <div class="menu-show" id="showMenu"></div>
+    </section>
+      <!-- Header and description -->
+      <h1 class="header" id="header">Minecraft Wordle</h1>
+      <!-- Warnings-->
+      <section class="warnings" id="warnings">
+        <div class="error too-many-letters" id="tooManyLetters">Too many letters!</div>
+        <div class="error not-enough-letters" id="notEnoughLetters">Not enough letters!</div>
+        <div class="error correct-letter" id="correctLetter">The correct word was: <!-- JS inserts correct word here--></div>
+      </section>
+      <div class="desc" id="descWarnings">
+        <p class="desc" id="description">Minecraft Wordle is a version of the <a class="link wordle-link" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> made as a side projects by <a class="link mules-link" href="https://www.mulesgaming.com">Mules Gaming</a>.</p>
+      </div>
+      <!-- Main game -->
+      <section id="mainGame" class="main-game">
+        <!-- Guesses -->
+        <div class="guesses" id="guesses">
+          <div class="guess-row guess-row-1" id="guessRow1">
+            <!-- Tiles -->
+            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+          </div>
+          <div class="guess-row guess-row-2" id="guessRow2">
+            <!-- Tiles -->
+            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+          </div>
+          <div class="guess-row guess-row-3" id="guessRow3">
+            <!-- Tiles -->
+            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+          </div> 
+          <div class="guess-row guess-row-4" id="guessRow4">
+            <!-- Tiles -->
+            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+          </div>  
+          <div class="guess-row guess-row-5" id="guessRow5">
+            <!-- Tiles -->
+            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+          </div>
+          <div class="guess-row guess-row-6" id="guessRow6">
+            <!-- Tiles -->
+            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+          </div> 
+        </div>
+        <!-- Keyboard -->
+        <div class="keyboard" id="keyboard">
+          <div class="row row1" id="row">
+            <button class="keyboard-button a" id="keyboard-button" aria-label="a" onclick="letterClick (`a`)">A</button>
+            <button class="keyboard-button b" id="keyboard-button" aria-label="b" onclick="letterClick (`b`)">B</button>
+            <button class="keyboard-button backspace" id="keyboard-button" aria-label="backspace" onclick="onDelete ()">backspace</button>
+            <button class="keyboard-button enter" id="keyboard-button" aria-label="enter" onclick="onEnter ()">Enter</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Script -->
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/menu.js"></script>
+    <script src="/scripts/themes.js"></script>
+  </body>
+</html>

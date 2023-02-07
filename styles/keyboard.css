@@ -1,0 +1,32 @@
+/* Rows */
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+
+.keyboard-button{
+  background-color: white;
+  border-radius: 3px;
+  padding: 10px 15px 10px 15px;
+  font-size: 18px;
+  height: 100%;
+}
+
+.keyboard-button:hover{
+  background-color: rgb(154, 154, 154);
+  cursor: pointer;
+}
+
+.backspace{
+  padding: 0px;
+}
+
+.row1 .backspace{
+  font-family: Font Icons;
+  padding: 5px 15px 5px 15px;
+  font-size: 35px;
+}

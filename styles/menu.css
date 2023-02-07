@@ -1,0 +1,76 @@
+:root{
+  --menu-background-color: rgb(55, 54, 54)
+}
+
+/* Menu icons */
+
+.menu-icons{
+  display: flex;
+}
+
+.menu-show,
+.theme-switcher{
+  font-family: Font Icons, Roboto, Arial;
+  color: black;
+  cursor: pointer;
+  width: 25px;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.theme-switcher-text{
+  color: black;
+  text-decoration: none;
+}
+
+/* Main Menu popup */
+
+.main-menu{
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;/* Change to hidden one done editing appearance. */
+  background-color: var(--menu-background-color, gray);
+  padding: 5px 35px 10px 35px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 350px;
+  visibility: hidden;
+}
+
+.close-menu-div{
+  position: relative;
+}
+
+.close-menu-button{
+  /* Text */
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  /* position */
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  /* Button */
+  background-color: transparent;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-menu-button:hover{
+  color: black;
+  background-color: rgb(157, 157, 157);
+  opacity: 0.6;
+  transition: 1s;
+}
+
+.minecraft-wiki-page{
+  background-color: blue;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+

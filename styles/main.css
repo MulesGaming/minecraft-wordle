@@ -1,0 +1,73 @@
+/* Universal styles */
+body{
+  margin: 0px;
+  font-family: Roboto, Arial;
+  color: white;
+  background-image: url("/media/images/minecraft-wordle/grass_block.png");
+}
+
+.capital-letter{
+  text-transform: uppercase;
+}
+
+main{
+  background-color: rgb(53, 42, 42);
+}
+
+.link{
+  color: white;
+}
+
+/* Custom highlight color */
+
+::selection{
+  background-color: yellow;
+  color: black;
+}
+
+/* Font */
+
+@font-face {
+  font-family: Font Icons;
+  font-weight: normal;
+  src: url(/media/fonts/text-icons.ttf);
+}
+
+/* Warnings */
+
+.warnings{
+  position: relative;
+  align-items: top;
+  vertical-align: top;
+}
+
+.error{
+  background-color: red;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  max-width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  visibility: hidden;
+  z-index: 100;
+}
+
+/* Header and description */
+
+.header,
+.desc{
+  text-align: center;
+}
+
+.header{
+  margin-top: 0px;
+}
+
+/* Main game */
+
+.main-game{
+  text-align: center;
+}

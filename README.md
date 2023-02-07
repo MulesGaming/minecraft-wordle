@@ -1,2 +1,1 @@
-# minecraft-wordle
- 
+Minecraft Wordle

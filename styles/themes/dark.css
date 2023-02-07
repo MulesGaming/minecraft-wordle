@@ -1,0 +1,30 @@
+/* Styles when dark theme is active */
+:root{
+  /* Dark theme vars */
+  --incorrect-color-darktheme: rgb(0, 0, 0);
+  --semicorrect-color-darktheme: rgb(92, 92, 53);
+  --correct-color-darktheme: rgb(13, 52, 93);
+  --tile-background-color-darktheme: #7e7e7e;
+}
+
+body{
+  color: rgb(255, 255, 255)
+  }
+
+.link{
+  color: rgb(255, 255, 255)
+}
+
+main{
+  background-color: rgb(0, 0, 0)
+}
+
+.keyboard-button{
+  color: white;
+  background-color: black;
+  border-color: white;
+}
+
+.tile{
+  background-color: var(--tile-background-color-darktheme);
+}

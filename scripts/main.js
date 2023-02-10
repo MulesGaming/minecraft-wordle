@@ -10,6 +10,10 @@ window.addEventListener('beforeunload', function (unload) {
   unload.returnValue = '';
 });
 
+// Can type
+
+var canType = 1
+
 // Word of the day
 
 const word = ["s", "w", "o", "r", "d"];
@@ -31,6 +35,8 @@ var finalLetter
 
 // Detect when key is pressed
 
+if (canType === 1) {
+
 // Listen for keydown events on the document
 document.addEventListener('keydown', function key (event) {
   // Check if the key that was pressed is in the range of 'a' to 'z'
@@ -40,6 +46,7 @@ document.addEventListener('keydown', function key (event) {
     addLetter (`${event.key}`)
   }
 });
+}
 
 // Keyboard
 
@@ -165,9 +172,10 @@ function checkForCorrectLetters () {
   const tile = [document.querySelector(`#guessRow` + tileRow + ` .tile` + 1), document.querySelector(`#guessRow` + tileRow + ` .tile` + 2), document.querySelector(`#guessRow` + tileRow + ` .tile` + 3), document.querySelector(`#guessRow` + tileRow + ` .tile` + 4), document.querySelector(`#guessRow` + tileRow + ` .tile` + 5)]  
 
   for (let i = 0; i < 5; i++) {
+
     if (tileText[i] === word[i]){
       tile[i].style.backgroundColor="var(--correct-color)"
-    }else {
+    }else {     
       tile[i].style.backgroundColor="var(--incorrect-color)"
     }
   }
@@ -175,5 +183,6 @@ function checkForCorrectLetters () {
 
   if (tileText.sort().join(',') === word.sort().join(',')) {
     showMenuInit ()
+    canType = 0
   }
 }

@@ -3,7 +3,7 @@ body{
   margin: 0px;
   font-family: Roboto, Arial;
   color: white;
-  background-image: url("/media/images/minecraft-wordle/grass_block.png");
+  background-image: url("/media/img/grass_block.png");
 }
 
 .capital-letter{

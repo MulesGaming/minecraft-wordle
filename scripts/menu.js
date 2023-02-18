@@ -36,3 +36,26 @@ function showMenuInit () {
   showMenuButton.innerHTML = `<span onclick="showMenu()">stats</span>`;
 }
 
+// Share
+
+var currentPageURL = window.location.href;
+
+setTwitterURL ()
+setEmailLink ()
+
+// Twitter
+function setTwitterURL () {
+  let twitterLink = document.getElementById("twitterLink");
+  var twitterTweetLink = `https://twitter.com/intent/tweet?text=${currentPageURL}`;
+  twitterLink.setAttribute('href', twitterTweetLink);
+}
+// Email
+function setEmailLink () {
+  let emailLink = document.getElementById("emailLink");
+  var emailSendLink = `mailto:?subject=Minecraft%20Wordle&body=${currentPageURL}`;
+  emailLink.setAttribute('href', emailSendLink);
+}
+// Copy Link
+function copyLink () {
+  navigator.clipboard.writeText(currentPageURL);
+}

@@ -30,6 +30,18 @@ var row1 = `<div class="row row1" id="row">
 <button class="keyboard-button" id="keyboard-button" aria-label="p" onclick="letterClick ('p')">P</button>
 </div>`;
 
+var row2 = `<div class="row row1" id="row">
+<button class="keyboard-button" id="keyboard-button" aria-label="a" onclick="letterClick ('a')">A</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="s" onclick="letterClick ('s')">S</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="d" onclick="letterClick ('d')">D</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="f" onclick="letterClick ('f')">F</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="g" onclick="letterClick ('g')">G</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="h" onclick="letterClick ('h')">H</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="j" onclick="letterClick ('j')">J</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="k" onclick="letterClick ('k')">K</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="l" onclick="letterClick ('l')">L</button>
+</div>`;
+
 var row3 = `<div class="row row3" id="row">
 <button class="keyboard-button" id="keyboard-button" aria-label="enter" onclick="onEnter ()">Enter</button>
 <button class="keyboard-button" id="keyboard-button" aria-label="z" onclick="letterClick ('z')">Z</button>
@@ -39,11 +51,12 @@ var row3 = `<div class="row row3" id="row">
 <button class="keyboard-button" id="keyboard-button" aria-label="b" onclick="letterClick ('b')">B</button>
 <button class="keyboard-button" id="keyboard-button" aria-label="n" onclick="letterClick ('n')">N</button>
 <button class="keyboard-button" id="keyboard-button" aria-label="m" onclick="letterClick ('m')">M</button>
-<button class="keyboard-button" id="keyboard-button" aria-label="backspace" onclick="onDelete ()">backspace</button>
+<button class="keyboard-button backspace-button" id="keyboard-button" aria-label="backspace" onclick="onDelete ()"><img class="backspace-icon" alt="backspace" title="Backspace" src="/media/img/backspace-button.svg"></button>
 </div>`;
 
 
-main.innerHTML = row1
+main.innerHTML += row1
+main.innerHTML += row2
 main.innerHTML += row3
 
 // Add CSS

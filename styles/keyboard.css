@@ -9,11 +9,14 @@
 /* Buttons */
 
 .keyboard-button{
-  background-color: white;
-  border-radius: 3px;
-  padding: 10px 15px 10px 15px;
-  font-size: 18px;
-  height: 100%;
+  color: white;
+  background-color: rgb(156, 156, 156);
+  border-radius: 5px;
+  padding: 17px 24px 17px 24px;
+  font-size: 15px;
+  margin: 2px;
+  font-family: Roboto, Arial;
+  max-width: 13.100;
 }
 
 .keyboard-button:hover{
@@ -21,11 +24,15 @@
   cursor: pointer;
 }
 
-.backspace{
-  padding: 0px;
+.backspace-icon{
+  width: 25px;
 }
 
-.row1 .backspace{
+.backspace-button{
+  padding: 10px 24px 10px 24px;
+}
+
+.row1{
   font-family: Font Icons;
   padding: 5px 15px 5px 15px;
   font-size: 35px;

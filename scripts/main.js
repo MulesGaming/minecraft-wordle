@@ -10,10 +10,6 @@ window.addEventListener('beforeunload', function (unload) {
   unload.returnValue = '';
 });
 
-// Can type
-
-var canType = 1
-
 // Word of the day
 
 const word = ["s", "w", "o", "r", "d"];
@@ -35,7 +31,6 @@ var finalLetter
 
 // Detect when key is pressed
 
-if (canType === 1) {
 
 // Listen for keydown events on the document
 document.addEventListener('keydown', function key (event) {
@@ -46,15 +41,14 @@ document.addEventListener('keydown', function key (event) {
     addLetter (`${event.key}`)
   }
 });
-}
+
 
 // Keyboard
 
 var userLetter
 
 function letterClick (usedLetter) {
-  addLetter (usedLetter)
-  userLetter = usedLetter
+    addLetter (usedLetter)
 }
 
 // Set tile row
@@ -183,6 +177,5 @@ function checkForCorrectLetters () {
 
   if (tileText.sort().join(',') === word.sort().join(',')) {
     showMenuInit ()
-    canType = 0
   }
 }

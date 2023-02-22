@@ -4,7 +4,7 @@
 
 console.log("Themes.js loaded")
 
-// Get value of ?theme
+// Get value of ?theme=
 
 const queryString = window.location.search;
 
@@ -19,11 +19,6 @@ let menuButton = document.getElementById("showMenu")
 
 if (theme === "dark") {
   setThemeDark ()
-  window.onload=()=>{
-    themeSwitcher.setAttribute('href', "?theme=light");
-    themeSwitcher.style.color = "white";
-    menuButton.style.color = "white";
-  }
 }else if (theme === "light"){
   setThemeLight ()
 }else {
@@ -34,6 +29,14 @@ if (theme === "dark") {
  
 function setThemeDark () {
   console.log("Using dark theme")
+  window.onload=()=>{
+    themeSwitcher.setAttribute('href', "?theme=light");
+    themeSwitcher.style.color = "white";
+    menuButton.style.color = "white";
+  }
+  // Change Icon
+  let themeSwitcherIcon = document.getElementById("themeSwitcherText")
+  themeSwitcherIcon.innerHTML = "light mode"
   // Insert CSS file for dark mode
   var darkModeCSSLink = document.createElement("link");
   darkModeCSSLink.setAttribute("rel", "stylesheet");

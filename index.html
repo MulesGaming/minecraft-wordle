@@ -26,7 +26,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/keyboard.css">
     <link rel="stylesheet" href="/styles/tiles.css">
     <link rel="stylesheet" href="/styles/menu.css">
   </head>
@@ -68,7 +67,7 @@
         <div class="error correct-letter" id="correctLetter">The correct word was: <!-- JS inserts correct word here--></div>
       </section>
       <div class="desc" id="descWarnings">
-        <p class="desc" id="description">Minecraft Wordle is a version of the <a class="link wordle-link" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> made as a side projects by <a class="link mules-link" href="https://www.mulesgaming.com">Mules Gaming</a>.</p>
+        <p class="desc" id="description">Minecraft Wordle is a version of the <a class="link wordle-link" target="_blank" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> made as a side projects by <a class="link mules-link" target="_blank" href="https://www.mulesgaming.com">Mules Gaming</a>.</p>
       </div>
       <!-- Main game -->
       <section id="mainGame" class="main-game">
@@ -124,19 +123,16 @@
           </div> 
         </div>
         <!-- Keyboard -->
-        <div class="keyboard" id="keyboard">
-          <div class="row row1" id="row">
-            <button class="keyboard-button a" id="keyboard-button" aria-label="a" onclick="letterClick (`a`)">A</button>
-            <button class="keyboard-button b" id="keyboard-button" aria-label="b" onclick="letterClick (`b`)">B</button>
-            <button class="keyboard-button backspace" id="keyboard-button" aria-label="backspace" onclick="onDelete ()">backspace</button>
-            <button class="keyboard-button enter" id="keyboard-button" aria-label="enter" onclick="onEnter ()">Enter</button>
+        <div class="keyboard-root" id="keyboardRoot">
+          <div class="keyboard" id="keyboard">
           </div>
         </div>
       </section>
     </main>
-    <!-- Script -->
+    <!-- Scripts -->
     <script src="/scripts/main.js"></script>
     <script src="/scripts/menu.js"></script>
     <script src="/scripts/themes.js"></script>
+    <script src="/scripts/write-keyboard.js"></script>
   </body>
 </html>

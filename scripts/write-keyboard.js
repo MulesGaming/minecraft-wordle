@@ -10,10 +10,14 @@ let shadowRoot = document.getElementById("keyboard");
 // Shadow DOM
 
 const shadow = shadowRoot.attachShadow({ mode: "open" });
-//
+
+// Make main div
+
 const main = document.createElement("div");
-//
-var text = `<div class="row row1" id="row">
+
+// Add rows
+
+var row1 = `<div class="row row1" id="row">
 <button class="keyboard-button" id="keyboard-button" aria-label="q" onclick="letterClick ('q')">Q</button>
 <button class="keyboard-button" id="keyboard-button" aria-label="w" onclick="letterClick ('w')">W</button>
 <button class="keyboard-button" id="keyboard-button" aria-label="e" onclick="letterClick ('e')">E</button>
@@ -24,11 +28,23 @@ var text = `<div class="row row1" id="row">
 <button class="keyboard-button" id="keyboard-button" aria-label="i" onclick="letterClick ('i')">I</button>
 <button class="keyboard-button" id="keyboard-button" aria-label="o" onclick="letterClick ('o')">O</button>
 <button class="keyboard-button" id="keyboard-button" aria-label="p" onclick="letterClick ('p')">P</button>
-<button class="keyboard-button" id="keyboard-button" aria-label="backspace" onclick="onDelete ()">backspace</button>
-<button class="keyboard-button" id="keyboard-button" aria-label="enter" onclick="onEnter ()">Enter</button>
 </div>`;
 
-main.innerHTML = text
+var row3 = `<div class="row row3" id="row">
+<button class="keyboard-button" id="keyboard-button" aria-label="enter" onclick="onEnter ()">Enter</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="z" onclick="letterClick ('z')">Z</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="x" onclick="letterClick ('x')">X</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="c" onclick="letterClick ('c')">C</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="v" onclick="letterClick ('v')">V</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="b" onclick="letterClick ('b')">B</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="n" onclick="letterClick ('n')">N</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="m" onclick="letterClick ('m')">M</button>
+<button class="keyboard-button" id="keyboard-button" aria-label="backspace" onclick="onDelete ()">backspace</button>
+</div>`;
+
+
+main.innerHTML = row1
+main.innerHTML += row3
 
 // Add CSS
 

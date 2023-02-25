@@ -31,7 +31,6 @@ var finalLetter
 
 // Detect when key is pressed
 
-
 // Listen for keydown events on the document
 document.addEventListener('keydown', function key (event) {
   // Check if the key that was pressed is in the range of 'a' to 'z'
@@ -59,12 +58,22 @@ var tileRow = 1
 
 var tileNumber = 1
 
+// Define can type
+
+var canType = 1
+
+// Add letter
+
 function addLetter (letter) {
-  // Too many warning
+  // Check if input is ok to enter
   if (tileNumber > 5){
     tooManyLetterWarning()
-  }else {
+  }else if (canType === 1) {
     writeLetter(letter)
+  }else if (canType === 0) {
+    console.warn("Typing not enabled.")
+  } else {
+    console.error("Unknown status of typing.")
   }
 }
 
@@ -149,6 +158,7 @@ function checkForLoss () {
     alert("You ran out of guesses!")
     let correctWord = document.getElementById("correctLetter")
     correctWord.style.visibility="visible";
+    canType = 0
   }
 }
 
@@ -176,6 +186,11 @@ function checkForCorrectLetters () {
   // Check for win
 
   if (tileText.sort().join(',') === word.sort().join(',')) {
-    showMenuInit ()
+    win ()
   }
+}
+
+function win () {
+  showMenuInit ()
+  canType = 0
 }

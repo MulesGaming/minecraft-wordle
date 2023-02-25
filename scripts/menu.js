@@ -4,7 +4,7 @@ console.log("Menu.js loaded");
 
 //
 
-var aboutWord = "The sword is a combat wepon in Minecraft. It comes in 6 types: wood, sword, iron, gold, diamond, and netherite.";
+var aboutWord = "The sword is a combat weapon in Minecraft. It comes in 6 types: wood, stone, iron, gold, diamond, and netherite.";
 
 var minecraftWikiLink = "https://minecraft.fandom.com/wiki/Sword";
 

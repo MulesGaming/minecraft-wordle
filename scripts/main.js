@@ -10,9 +10,29 @@ window.addEventListener('beforeunload', function (unload) {
   unload.returnValue = '';
 });
 
-// Word of the day
+// Fetch word of the day
 
-const word = ["s", "w", "o", "r", "d"];
+let word = "";
+var fetchURL = "/words.json";
+
+async function getJson(url) {
+    let response = await fetch(url);
+    let data = await response.json()
+    return data;
+}
+
+async function mainFetch() {
+    //OPTION 1
+    getJson(fetchURL).then(data => setWord (data));
+};
+
+function setWord (wordData) {
+  let wordsArray = wordData.words
+  let currentWord = wordsArray[0].word
+  word = currentWord
+}
+
+mainFetch();
 
 // Make correct word popup to the word
 

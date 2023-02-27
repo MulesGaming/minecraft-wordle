@@ -2,11 +2,30 @@
 
 console.log("Menu.js loaded");
 
+// Pre-define vars
+
+let aboutWord;
+let minecraftWikiLink;
+
+// Fetch .json
+
+fetch ("/words.json")
+
+// Process fetch results
+
+.then((result)=>{
+  return result.json()
+}).then((wordsJson)=>{
+  //
+  let wordsArray = wordsJson.words;
+  aboutWord = wordsArray[0].about;
+  minecraftWikiLink = wordsArray[0].wiki;
+  setMenuContents(aboutWord, minecraftWikiLink);
+  }
+)
+
 //
 
-var aboutWord = "The sword is a combat weapon in Minecraft. It comes in 6 types: wood, stone, iron, gold, diamond, and netherite.";
-
-var minecraftWikiLink = "https://minecraft.fandom.com/wiki/Sword";
 
 // Write to menu
 
@@ -14,9 +33,11 @@ let aboutWordContainer = document.getElementById("aboutWord");
 
 let minecraftWikiButton = document.getElementById("minecraftWikiLink");
 
-aboutWordContainer.innerHTML = aboutWord;
+function setMenuContents (aboutWord, minecraftWikiLink) {
+  aboutWordContainer.innerHTML = aboutWord;
 
-minecraftWikiButton.setAttribute('href', minecraftWikiLink);
+  minecraftWikiButton.setAttribute('href', minecraftWikiLink);
+}
 
 // Hide and open menu
 

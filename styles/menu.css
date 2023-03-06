@@ -44,13 +44,19 @@
   position: relative;
 }
 
+.facts-header,
+.close-menu-button{
+  margin: 15px;
+  display: inline-block;
+}
+
 .close-menu-button{
   /* Text */
   color: rgb(255, 255, 255);
   font-size: 18px;
-  /* position */
+  /* Pos */
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 10px;
   /* Button */
   background-color: transparent;
@@ -92,6 +98,7 @@
   cursor: pointer;
   color: white;
   width: 160px;
+  height: 40px;
   position: sticky;
 }
 
@@ -103,6 +110,7 @@
 
 .share-image{
   width: 40px;
+  
   vertical-align: middle;
   padding-right: 5px; 
 }

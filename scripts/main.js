@@ -10,6 +10,16 @@ window.addEventListener('beforeunload', function (unload) {
   unload.returnValue = '';
 });
 
+// Get Random Integer function
+
+function getRandomIndex (min, max) {
+  if (!Number.isInteger(min) && !Number.isInteger(max) && min > max) {
+    return 0;
+  };
+
+  return Math.round(Math.random() * (max - min) + min);
+}
+
 // Fetch word of the day
 
 let word = "";
@@ -28,7 +38,7 @@ async function mainFetch() {
 
 function setWord (wordData) {
   let wordsArray = wordData.words
-  let currentWord = wordsArray[0].word
+  let currentWord = wordsArray[getRandomIndex(0, wordsArray.length)].word
   word = currentWord
 }
 
@@ -99,7 +109,7 @@ function addLetter (letter) {
 
 function writeLetter (letter) {
   // Write letter
-  let containerToWrite = document.querySelector(`#guessRow` + tileRow + `  #tileLetter` + tileNumber)
+  let containerToWrite = document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + tileNumber)
   var finalLetter = letter
 
   tileNumber = tileNumber + 1
@@ -128,8 +138,8 @@ window.addEventListener('keydown', function (keypressDetect) {
 // Delete action
 
 function onDelete () {
-  let containerToWrite = document.querySelector(`#guessRow` + tileRow + `  #tileLetter` + tileNumber)
-  let finalBox = document.querySelector(`#guessRow` + tileRow + ` #tileLetter5`)
+  let containerToWrite = document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + tileNumber)
+  let finalBox = document.querySelector(`#guessRow` + tileRow + ` .tile-letter5`)
   if (finalBox.childNodes.length === 1) {
     finalBox.innerHTML = ""
     tileNumber = 4
@@ -186,26 +196,40 @@ function checkForLoss () {
 
 function checkForCorrectLetters () {
 
-  const tileSpan = [document.querySelector(`#guessRow` + tileRow + `  #tileLetter` + 1), document.querySelector(`#guessRow` + tileRow + `  #tileLetter` + 2), document.querySelector(`#guessRow` + tileRow + `  #tileLetter` + 3), document.querySelector(`#guessRow` + tileRow + `  #tileLetter` + 4), document.querySelector(`#guessRow` + tileRow + `  #tileLetter` + 5)]
+  const tileSpan = [
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 1), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 2), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 3), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 4), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 5)
+  ]
 
   const tileText = [];
+
   for (let i = 0; i < 5; i++) {
     tileText[i] = tileSpan[i].textContent
   }
 
-  const tile = [document.querySelector(`#guessRow` + tileRow + ` .tile` + 1), document.querySelector(`#guessRow` + tileRow + ` .tile` + 2), document.querySelector(`#guessRow` + tileRow + ` .tile` + 3), document.querySelector(`#guessRow` + tileRow + ` .tile` + 4), document.querySelector(`#guessRow` + tileRow + ` .tile` + 5)]  
+  const tile = [
+    document.querySelector(`#guessRow` + tileRow + ` .tile` + 1), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile` + 2), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile` + 3), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile` + 4), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile` + 5)
+  ]  
 
   for (let i = 0; i < 5; i++) {
-
     if (tileText[i] === word[i]){
       tile[i].style.backgroundColor="var(--correct-color)"
-    }else {     
+    }else if (word.includes(tileText[i])){
+      tile[i].style.backgroundColor="var(--semicorrect-color)"
+    }else {
       tile[i].style.backgroundColor="var(--incorrect-color)"
     }
   }
   // Check for win
 
-  if (tileText.sort().join(',') === word.sort().join(',')) {
+  if (tileText.join(',') === word.join(',')) {
     win ()
   }
 }
@@ -214,3 +238,4 @@ function win () {
   showMenuInit ()
   canType = 0
 }
+

@@ -18,7 +18,7 @@
     <meta property="twitter:domain" content="mulesgaming.com">
     <meta property="twitter:url" content="https://www.mulesgaming.com/projects/minecraft-wordle/">
     <meta name="twitter:title" content="Minecraft Wordle">
-    <meta name="twitter:description" content="A daily Minecraft word game! Inspired by the original wordle.">
+    <meta name="twitter:description" content="A Minecraft word game! Inspired by the original wordle.">
     <meta name="twitter:image" content="https://www.mulesgaming.com/media/images/minecraft-wordle/logo.png">  
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,10 +31,10 @@
   </head>
   <body class="body" id="body">
     <!-- Body area -->
-    <!-- Popup menu(hidden by default) -->
+    <!-- Popup menu (hidden by default) -->
     <section class="main-menu" id="mainMenu">
       <div class="top">
-        <h1>Facts about todays word</h1>
+        <h1 class="facts-header">Facts about todays word</h1>
         <!-- Close -->
         <button class="close-menu-button" id="closeMenu" onclick="minimizeMenu()">X</button>
       </div>
@@ -75,51 +75,51 @@
         <div class="guesses" id="guesses">
           <div class="guess-row guess-row-1" id="guessRow1">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
           </div>
           <div class="guess-row guess-row-2" id="guessRow2">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
           </div>
           <div class="guess-row guess-row-3" id="guessRow3">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
           </div> 
           <div class="guess-row guess-row-4" id="guessRow4">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
           </div>  
           <div class="guess-row guess-row-5" id="guessRow5">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
           </div>
           <div class="guess-row guess-row-6" id="guessRow6">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter" id="tileLetter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter" id="tileLetter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter" id="tileLetter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter" id="tileLetter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter" id="tileLetter5"></span></div>
+            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
           </div> 
         </div>
         <!-- Keyboard -->

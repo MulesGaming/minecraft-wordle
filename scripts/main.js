@@ -38,8 +38,9 @@ async function mainFetch() {
 
 function setWord (wordData) {
   let wordsArray = wordData.words
-  let currentWord = wordsArray[getRandomIndex(0, wordsArray.length)].word
-  word = currentWord
+  let currentWordArray = wordsArray[getRandomIndex(0, wordsArray.length)]
+  word = currentWordArray.word
+  setMenuContents(currentWordArray.about, currentWordArray.wiki);
 }
 
 mainFetch();

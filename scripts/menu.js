@@ -2,31 +2,6 @@
 
 console.log("Menu.js loaded");
 
-// Pre-define vars
-
-let aboutWord;
-let minecraftWikiLink;
-
-// Fetch .json
-
-fetch ("/words.json")
-
-// Process fetch results
-
-.then((result)=>{
-  return result.json()
-}).then((wordsJson)=>{
-  //
-  let wordsArray = wordsJson.words;
-  aboutWord = wordsArray[0].about;
-  minecraftWikiLink = wordsArray[0].wiki;
-  setMenuContents(aboutWord, minecraftWikiLink);
-  }
-)
-
-//
-
-
 // Write to menu
 
 let aboutWordContainer = document.getElementById("aboutWord");

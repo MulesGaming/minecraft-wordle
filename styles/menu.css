@@ -74,7 +74,7 @@
 
 .minecraft-wiki-page{
   background-color: blue;
-  padding: 5px;
+  padding: 15px 30px 15px 30px;
   border-radius: 5px;
   color: white;
   cursor: pointer;
@@ -113,5 +113,18 @@
   
   vertical-align: middle;
   padding-right: 5px; 
+}
+
+.github-holder{
+  margin-top: 10px;
+}
+
+.github-button{
+  background-color: black;
+  color: white;
+  border: 2px white solid;
+  border-radius: 5px;
+  padding: 15px 30px 15px 30px;
+  cursor: pointer;
 }
 

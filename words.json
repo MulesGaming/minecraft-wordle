@@ -6,6 +6,8 @@
     {"word": ["s","w","o","r","d"], "about": "The sword is a combat weapon in Minecraft. It comes in 6 types: wood, stone, iron, gold, diamond, and netherite.", "wiki": "https://minecraft.fandom.com/wiki/Sword"},
     {"word": ["c","r","a","f","t"], "about": "Crafting is a fundamental part of Minecraft (its even in the name)! Typically you craft using a crafting table. You use items such as iron and gold while crafting but most items in the game can be used to craft!", "wiki": "https://minecraft.fandom.com/wiki/Crafting"},
     {"word": ["b","l","a","z","e"], "about": "Blazes are a mob made of flame in Minecraft. They live in Neather fortresses and spit fireballs at you.", "wiki": "https://minecraft.fandom.com/wiki/Blaze"},
-    {"word": ["b","l","o","c","k"], "about": "The world of Minecraft is made out of blocks. All blocks can be mined*, and placed.", "wiki": "https://minecraft.fandom.com/wiki/Block"}
+    {"word": ["b","l","o","c","k"], "about": "The world of Minecraft is made out of blocks. All blocks can be mined*, and placed.", "wiki": "https://minecraft.fandom.com/wiki/Block"},
+    {"word": ["b","o","a","t","s"], "about": "A boat is a item that can be used to travel across water (and ice). Each wood type (excluding the nether wood types) has a variant (oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, and bamboo (Cherry and bamboo are upcoming in the 1.20 Tales and Trails update)).", "wiki": "https://minecraft.fandom.com/wiki/Boat"},
+    {"word": ["p","l","a","n","k"], "about": "Wooden planks can be crafted from one log of the desired plank varent. Planks are often used in crafting and can be used as a building block. Each wood type has a plank (oak, spruce, birch, jungle, acacia, dark oak, warped, crimson, mangrove, cherry, and bamboo (Cherry and bamboo are upcoming in the 1.20 Tales and Trails update)).", "wiki": "https://minecraft.fandom.com/wiki/Planks"}
   ]
 }

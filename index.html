@@ -42,6 +42,9 @@
         <p class="about-word" id="aboutWord"><!-- JS will insert about here. --></p>
         <a id="minecraftWikiLink" target="_blank" href="#"><button class="minecraft-wiki-page">Minecraft wiki page about todays word</button></a>
       </div>
+      <div class="github-holder">
+        <a class="github-link" targert="_blank" href="https://github.com/MulesGaming/minecraft-wordle"><button class="github-button">Source code avaible on GitHub!</button></a>
+      </div>
       <div class="share-holder">
         <h1 class="share-header">Share</h1>
         <ul class="share">
@@ -65,6 +68,22 @@
         <div class="error too-many-letters" id="tooManyLetters">Too many letters!</div>
         <div class="error not-enough-letters" id="notEnoughLetters">Not enough letters!</div>
         <div class="error correct-letter" id="correctLetter">The correct word was: <!-- JS inserts correct word here--></div>
+        <!-- No JS warning -->
+        <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might accor because your browser does not support Javascript, you have javascript disabled in browser settings, or have a exstention that disables it.</div>
+      <style>
+        .no-js{
+  background-color: red;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  max-width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 100;
+}
+      </style></noscript>
       </section>
       <div class="desc" id="descWarnings">
         <p class="desc" id="description">Minecraft Wordle is a version of the <a class="link wordle-link" target="_blank" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> made as a side projects by <a class="link mules-link" target="_blank" href="https://www.mulesgaming.com">Mules Gaming</a>.</p>

@@ -42,7 +42,7 @@ setEmailLink ()
 // Twitter
 function setTwitterURL () {
   let twitterLink = document.getElementById("twitterLink");
-  var twitterTweetLink = `https://twitter.com/intent/tweet?text=${currentPageURL}`;
+  var twitterTweetLink = `https://twitter.com/intent/tweet?url=${currentPageURL}`;
   twitterLink.setAttribute('href', twitterTweetLink);
 }
 // Email

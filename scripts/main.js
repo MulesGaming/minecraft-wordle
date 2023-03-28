@@ -22,34 +22,39 @@ function getRandomIndex (min, max) {
 
 // Fetch word of the day
 
-let word = "";
+let word = [];
 var fetchURL = "/words.json";
 
 async function getJson(url) {
-    let response = await fetch(url);
-    let data = await response.json()
-    return data;
+  let response = await fetch(url);
+  let data = await response.json()
+  return data;
 }
 
 async function mainFetch() {
-    //OPTION 1
-    getJson(fetchURL).then(data => setWord (data));
+  //
+  getJson(fetchURL).then(data => setWord (data));
 };
 
 function setWord (wordData) {
   let wordsArray = wordData.words
   let currentWordArray = wordsArray[getRandomIndex(0, wordsArray.length)]
   word = currentWordArray.word
-  setMenuContents(currentWordArray.about, currentWordArray.wiki);
+  setMenuContents (currentWordArray.about, currentWordArray.wiki);
+  setCorrectWordWarning (word)
 }
 
 mainFetch();
 
 // Make correct word popup to the word
 
-for (let i = 0; i < 5; i++) {
-  let correctWord = document.getElementById("correctLetter")
-  correctWord.innerHTML += `<span class="capital-letter">` + word[i] + `</span>`
+function setCorrectWordWarning (word) {
+  let correctWordWarning = document.getElementById("correctWordWarning")
+  correctWordWarning.innerHTML += `<span class="capital-letter" id="correctWordWarningText"></span>`
+  let correctWordWarningText = document.getElementById("correctWordWarningText")
+  for (let i = 0; i < 5; i++) {
+    correctWordWarningText.innerHTML += word[i]
+  }
 }
 
 // Full first word
@@ -186,10 +191,10 @@ function onEnter () {
 
 function checkForLoss () {
   if (tileRow > 6){
-    alert("You ran out of guesses!")
-    let correctWord = document.getElementById("correctLetter")
+    let correctWord = document.getElementById("correctWordWarning")
     correctWord.style.visibility="visible";
     canType = 0
+    showMenuInit()
   }
 }
 
@@ -223,7 +228,7 @@ function checkForCorrectLetters () {
     if (tileText[i] === word[i]){
       tile[i].style.backgroundColor="var(--correct-color)"
     }else if (word.includes(tileText[i])){
-      tile[i].style.backgroundColor="var(--semicorrect-color)"
+        tile[i].style.backgroundColor="var(--semicorrect-color)"
     }else {
       tile[i].style.backgroundColor="var(--incorrect-color)"
     }
@@ -239,4 +244,3 @@ function win () {
   showMenuInit ()
   canType = 0
 }
-

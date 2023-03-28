@@ -28,6 +28,18 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/tiles.css">
     <link rel="stylesheet" href="/styles/menu.css">
+    <!-- No Script CSS -->
+    <noscript><style>.no-js{background-color: red;
+padding: 5px 10px 5px 10px;
+border-radius: 5px;
+max-width: 100%;
+position: absolute;
+top: 20%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+z-index: 100;
+}</style></noscript>
   </head>
   <body class="body" id="body">
     <!-- Body area -->
@@ -48,8 +60,8 @@
       <div class="share-holder">
         <h1 class="share-header">Share</h1>
         <ul class="share">
-          <li><a href="#" class="twitter-link" id="twitterLink" target="_blank"><button class="twitter-share"><img alt="Twitter logo" title="Twitter icon" src="https://www.mulesgaming.com/media/images/twitter_logo.png" class="share-image">Share to Twitter</button></li></a>
-          <li><a href="#" class="email-link" id="emailLink" target="_blank"><button class="email-share"><img alt="Email icon" title="Email icon, from Google fonts" src="/media/img/email-icon.svg" class="share-image">Share as email</button></li></a>
+          <li><a href="#" class="twitter-link" id="twitterLink" target="_blank"><button class="twitter-share"><img alt="Twitter logo" title="Twitter icon" src="https://www.mulesgaming.com/media/images/twitter_logo.png" class="share-image">Share to Twitter</button></a></li>
+          <li><a href="#" class="email-link" id="emailLink" target="_blank"><button class="email-share"><img alt="Email icon" title="Email icon, from Google fonts" src="/media/img/email-icon.svg" class="share-image">Share as email</button></a></li>
           <li><button class="link-share" onclick="copyLink ()"><img alt="Link icon" title="Link icon, from Google fonts" src="/media/img/link-icon.svg" class="share-image">Copy share link </button></li>
         </ul>
       </div>
@@ -67,24 +79,9 @@
       <section class="warnings" id="warnings">
         <div class="error too-many-letters" id="tooManyLetters">Too many letters!</div>
         <div class="error not-enough-letters" id="notEnoughLetters">Not enough letters!</div>
-        <div class="error correct-letter" id="correctLetter">The correct word was: <!-- JS inserts correct word here--></div>
+        <div class="error correct-letter" id="correctWordWarning">The correct word was: <!-- JS inserts correct word here--></div>
         <!-- No JS warning -->
-        <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might accor because your browser does not support Javascript, you have javascript disabled in browser settings, or have a exstention that disables it.</div>
-      <style>
-        .no-js{
-  background-color: red;
-  padding: 5px 10px 5px 10px;
-  border-radius: 5px;
-  max-width: 100%;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 100;
-}
-      </style></noscript>
-      </section>
+        <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might accor because your browser does not support Javascript, you have javascript disabled in browser settings, or have a exstention that disables it.</div></noscript>      </section>
       <div class="desc" id="descWarnings">
         <p class="desc" id="description">Minecraft Wordle is a version of the <a class="link wordle-link" target="_blank" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> made as a side projects by <a class="link mules-link" target="_blank" href="https://www.mulesgaming.com">Mules Gaming</a>.</p>
       </div>
@@ -94,51 +91,51 @@
         <div class="guesses" id="guesses">
           <div class="guess-row guess-row-1" id="guessRow1">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
+            <div class="tile tile1" ><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2" ><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3" ><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4" ><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5" ><span class="tile-letter tile-letter5"></span></div>
           </div>
           <div class="guess-row guess-row-2" id="guessRow2">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
+            <div class="tile tile1"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5"><span class="tile-letter tile-letter5"></span></div>
           </div>
           <div class="guess-row guess-row-3" id="guessRow3">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
+            <div class="tile tile1"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5"><span class="tile-letter tile-letter5"></span></div>
           </div> 
           <div class="guess-row guess-row-4" id="guessRow4">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
+            <div class="tile tile1"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5"><span class="tile-letter tile-letter5"></span></div>
           </div>  
           <div class="guess-row guess-row-5" id="guessRow5">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
+            <div class="tile tile1"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5"><span class="tile-letter tile-letter5"></span></div>
           </div>
           <div class="guess-row guess-row-6" id="guessRow6">
             <!-- Tiles -->
-            <div class="tile tile1" id="tile"><span class="tile-letter tile-letter1"></span></div>
-            <div class="tile tile2" id="tile"><span class="tile-letter tile-letter2"></span></div>
-            <div class="tile tile3" id="tile"><span class="tile-letter tile-letter3"></span></div>
-            <div class="tile tile4" id="tile"><span class="tile-letter tile-letter4"></span></div>
-            <div class="tile tile5" id="tile"><span class="tile-letter tile-letter5"></span></div>
+            <div class="tile tile1"><span class="tile-letter tile-letter1"></span></div>
+            <div class="tile tile2"><span class="tile-letter tile-letter2"></span></div>
+            <div class="tile tile3"><span class="tile-letter tile-letter3"></span></div>
+            <div class="tile tile4"><span class="tile-letter tile-letter4"></span></div>
+            <div class="tile tile5"><span class="tile-letter tile-letter5"></span></div>
           </div> 
         </div>
         <!-- Keyboard -->

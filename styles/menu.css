@@ -80,6 +80,16 @@
   cursor: pointer;
 }
 
+/* Current Streak */
+
+.streak-holder{
+  margin-top: 10px;
+}
+
+#currentStreakNumber{
+  font-weight: 500;
+}
+
 /* Share */
 
 .share{

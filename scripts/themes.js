@@ -4,6 +4,18 @@
 
 console.log("Themes.js loaded")
 
+// Manage localstorage theme
+
+/*
+const currentDefaultTheme = localStorage.getItem("userDefaultTheme");
+
+if (currentDefaultTheme === "dark") {
+  setThemeDark ()
+}else if (currentDefaultTheme === "light"){
+  setThemeLight ()
+}
+*/
+
 // Get value of ?theme=
 
 const queryString = window.location.search;
@@ -42,8 +54,10 @@ function setThemeDark () {
   darkModeCSSLink.setAttribute("rel", "stylesheet");
   darkModeCSSLink.setAttribute("href", "styles/themes/dark.css");
   document.getElementsByTagName("head")[0].appendChild(darkModeCSSLink);
+  // localStorage.setItem("userDefaultTheme", "dark");
 }
 
 function setThemeLight () {
   console.log("Using light theme")
+  // localStorage.setItem("userDefaultTheme", "light");
 }

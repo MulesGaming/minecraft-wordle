@@ -32,6 +32,11 @@ function showMenuInit () {
   showMenuButton.innerHTML = `<span onclick="showMenu()">stats</span>`;
 }
 
+// Set Current Streak
+
+const currentStreakSpan = document.getElementById("currentStreakNumber")
+currentStreakSpan.innerHTML = getCurrentStreak ()
+
 // Share
 
 var currentPageURL = window.location.href;

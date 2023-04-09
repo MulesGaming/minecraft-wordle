@@ -17,7 +17,7 @@ function getRandomIndex (min, max) {
     return 0;
   };
 
-  return Math.round(Math.random() * (max - min) + min);
+  return (Math.round(Math.random() * (max - min) + min));
 }
 
 // Fetch word of the day
@@ -45,6 +45,11 @@ function setWord (wordData) {
 }
 
 mainFetch();
+
+if (!word) {
+  let wordError = document.getElementById("errorLoadingWord")
+  wordError.style.visibility="visible";
+}
 
 // Make correct word popup to the word
 
@@ -195,12 +200,21 @@ function checkForLoss () {
     correctWord.style.visibility="visible";
     canType = 0
     showMenuInit()
+    clearStreak ()
   }
+}
+
+// Check how any of a value are in a array
+
+function countArrayValues(array, value) {
+    return array.filter((v) => (v === value)).length;
 }
 
 // Correct awnser checker
 
 function checkForCorrectLetters () {
+
+  let allreadyChecked = ["a", "a", "a", "a", "a"];
 
   const tileSpan = [
     document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 1), 
@@ -222,17 +236,27 @@ function checkForCorrectLetters () {
     document.querySelector(`#guessRow` + tileRow + ` .tile` + 3), 
     document.querySelector(`#guessRow` + tileRow + ` .tile` + 4), 
     document.querySelector(`#guessRow` + tileRow + ` .tile` + 5)
-  ]  
+  ] 
 
   for (let i = 0; i < 5; i++) {
     if (tileText[i] === word[i]){
       tile[i].style.backgroundColor="var(--correct-color)"
+      allreadyChecked[i] = `${tileText[i]}`;
     }else if (word.includes(tileText[i])){
+      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i]))) {
         tile[i].style.backgroundColor="var(--semicorrect-color)"
+        allreadyChecked[i] = `${tileText[i]}`;
+      }else{
+        tile[i].style.backgroundColor="var(--incorrect-color)"
+        allreadyChecked[i] = `${tileText[i]}`;  
+      }
     }else {
       tile[i].style.backgroundColor="var(--incorrect-color)"
+      allreadyChecked[i] = `${tileText[i]}`;
     }
+
   }
+
   // Check for win
 
   if (tileText.join(',') === word.join(',')) {
@@ -241,6 +265,7 @@ function checkForCorrectLetters () {
 }
 
 function win () {
+  addToStreak(1)
   showMenuInit ()
   canType = 0
 }

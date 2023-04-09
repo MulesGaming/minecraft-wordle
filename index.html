@@ -3,7 +3,7 @@
   <head>
     <title>Minecraft Wordle</title>
     <link rel="icon" type="image/x-icon" href="/media/img/logo.png">
-    <meta name="description" content="A daily Minecraft word game! Inspired by the original wordle.">
+    <meta name="description" content="A Minecraft word game! Inspired by the original wordle.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mules Gaming">
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <meta property="og:title" content="Minecraft Wordle">
     <meta property="og:url" content="https://www.mulesgaming.com/projects/minecraft-wordle/">
     <meta property="og:image" content="https://www.mulesgaming.com/media/images/minecraft-wordle/logo.png">
-    <meta property="og:description" content="A daily Minecraft word game! Inspired by the original wordle.">
+    <meta property="og:description" content="A Minecraft word game! Inspired by the original wordle.">
     <meta name='og:site_name' content='Mules Gaming'>
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -57,6 +57,9 @@ z-index: 100;
       <div class="github-holder">
         <a class="github-link" target="_blank" href="https://github.com/MulesGaming/minecraft-wordle"><button class="github-button">Source code avaible on GitHub!</button></a>
       </div>
+      <div class="streak-holder">
+        <span class="current-streak" id="currentStreak">Your current streak is: <span id="currentStreakNumber"></span> words.</span>
+      </div>
       <div class="share-holder">
         <h1 class="share-header">Share</h1>
         <ul class="share">
@@ -80,6 +83,8 @@ z-index: 100;
         <div class="error too-many-letters" id="tooManyLetters">Too many letters!</div>
         <div class="error not-enough-letters" id="notEnoughLetters">Not enough letters!</div>
         <div class="error correct-letter" id="correctWordWarning">The correct word was: <!-- JS inserts correct word here--></div>
+        <!-- Error loading word -->
+        <div class="error word-load-error" id="notEnoughLetters">There was a problem loading the word! Try reloading the page</div>
         <!-- No JS warning -->
         <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might accor because your browser does not support Javascript, you have javascript disabled in browser settings, or have a exstention that disables it.</div></noscript>      </section>
       <div class="desc" id="descWarnings">
@@ -147,6 +152,7 @@ z-index: 100;
       </section>
     </main>
     <!-- Scripts -->
+    <script src="/scripts/streak.js"></script>
     <script src="/scripts/main.js"></script>
     <script src="/scripts/menu.js"></script>
     <script src="/scripts/themes.js"></script>

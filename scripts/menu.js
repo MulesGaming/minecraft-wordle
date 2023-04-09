@@ -2,6 +2,18 @@
 
 console.log("Menu.js loaded");
 
+// Open and hide menu function
+
+function openMenu () {
+  menu.style.visibility = "visible";
+  // Update streak
+  setCurrentStreakMenu ()
+}
+
+function closeMenu () {
+  menu.style.visibility = "hidden";
+}
+
 // Write to menu
 
 let aboutWordContainer = document.getElementById("aboutWord");
@@ -12,6 +24,8 @@ function setMenuContents (aboutWord, minecraftWikiLink) {
   aboutWordContainer.innerHTML = aboutWord;
 
   minecraftWikiButton.setAttribute('href', minecraftWikiLink);
+  // Set on start (should be repaced later, just to prevent blank streaks)
+  setCurrentStreakMenu ()
 }
 
 // Hide and open menu
@@ -20,22 +34,25 @@ let menu = document.getElementById("mainMenu");
 let showMenuButton = document.getElementById("showMenu");
 
 function minimizeMenu () {
-  menu.style.visibility = "hidden";
+  closeMenu ();
 }
 
 function showMenu () {
-  menu.style.visibility = "visible";
+  openMenu ();
 }
 
 function showMenuInit () {
-  menu.style.visibility = "visible";
+  openMenu ();
   showMenuButton.innerHTML = `<span onclick="showMenu()">stats</span>`;
 }
 
 // Set Current Streak
+// Sets it to players when the menu is opened.
 
-const currentStreakSpan = document.getElementById("currentStreakNumber")
-currentStreakSpan.innerHTML = getCurrentStreak ()
+function setCurrentStreakMenu () {
+  const currentStreakSpan = document.getElementById("currentStreakNumber")
+  currentStreakSpan.innerHTML = getCurrentStreak ()
+}
 
 // Share
 

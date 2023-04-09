@@ -143,7 +143,7 @@ window.addEventListener('keydown', function (keypressDetect) {
 // Delete action
 
 function onDelete () {
-  let containerToWrite = document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + tileNumber)
+  let containerToWrite = document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + (tileNumber - 1))
   let finalBox = document.querySelector(`#guessRow` + tileRow + ` .tile-letter5`)
   if (finalBox.childNodes.length === 1) {
     finalBox.innerHTML = ""

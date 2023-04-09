@@ -16,8 +16,7 @@ function getRandomIndex (min, max) {
   if (!Number.isInteger(min) && !Number.isInteger(max) && min > max) {
     return 0;
   };
-
-  return (Math.round(Math.random() * (max - min) + min));
+  return (Math.floor(Math.random() * (max - min) + min));
 }
 
 // Fetch word of the day
@@ -45,11 +44,6 @@ function setWord (wordData) {
 }
 
 mainFetch();
-
-if (!word) {
-  let wordError = document.getElementById("errorLoadingWord")
-  wordError.style.visibility="visible";
-}
 
 // Make correct word popup to the word
 

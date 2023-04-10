@@ -144,15 +144,9 @@ window.addEventListener('keydown', function (keypressDetect) {
 
 function onDelete () {
   let containerToWrite = document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + (tileNumber - 1))
-  let finalBox = document.querySelector(`#guessRow` + tileRow + ` .tile-letter5`)
-  if (finalBox.childNodes.length === 1) {
-    finalBox.innerHTML = ""
-    tileNumber = 4
-  }else{
-    containerToWrite.innerHTML = ""
-    tileNumber = tileNumber - 1
-    fullFirstWord = fullFirstWord - finalLetter
-  }
+  containerToWrite.innerHTML = ""
+  tileNumber = tileNumber - 1
+  fullFirstWord = fullFirstWord - finalLetter
 }
 
 // Detect enter
@@ -208,7 +202,7 @@ function countArrayValues(array, value) {
 
 function checkForCorrectLetters () {
 
-  let allreadyChecked = ["a", "a", "a", "a", "a"];
+  let allreadyChecked = ["-", "-", "-", "-", "-"];
 
   const tileSpan = [
     document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 1), 
@@ -237,7 +231,7 @@ function checkForCorrectLetters () {
       tile[i].style.backgroundColor="var(--correct-color)"
       allreadyChecked[i] = `${tileText[i]}`;
     }else if (word.includes(tileText[i])){
-      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i]))) {
+      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i])) && !(tileText[i+1, i-1, i+2, i-2, i+3, i-3, i+4, i-4, i+5, i-5] === word[i+1, i-1, i+2, i-2, i+3, i-3, i+4, i-4, i+5, i-5])) {
         tile[i].style.backgroundColor="var(--semicorrect-color)"
         allreadyChecked[i] = `${tileText[i]}`;
       }else{
@@ -248,7 +242,6 @@ function checkForCorrectLetters () {
       tile[i].style.backgroundColor="var(--incorrect-color)"
       allreadyChecked[i] = `${tileText[i]}`;
     }
-
   }
 
   // Check for win

@@ -76,6 +76,7 @@ function setEmailLink () {
   emailLink.setAttribute('href', emailSendLink);
 }
 // Copy Link
-function copyLink () {
-  navigator.clipboard.writeText(currentPageURL);
+function copyLink (url) {
+  navigator.clipboard.writeText(url);
+  console.log("Coped url: " + url + " to clipboard.")
 }

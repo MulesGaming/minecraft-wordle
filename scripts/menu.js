@@ -6,8 +6,6 @@ console.log("Menu.js loaded");
 
 function openMenu () {
   menu.style.visibility = "visible";
-  // Update streak
-  setCurrentStreakMenu ()
 }
 
 function closeMenu () {
@@ -42,7 +40,11 @@ function showMenu () {
 }
 
 function showMenuInit () {
+  // Set streak
+  setCurrentStreakMenu ()
+  // Open Menu
   openMenu ();
+  // Show button
   showMenuButton.innerHTML = `<span onclick="showMenu()">stats</span>`;
 }
 

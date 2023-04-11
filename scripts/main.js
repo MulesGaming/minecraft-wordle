@@ -214,8 +214,11 @@ function checkForCorrectLetters () {
 
   const tileText = [];
 
+  let fullUserWord;
+
   for (let i = 0; i < 5; i++) {
     tileText[i] = tileSpan[i].textContent
+    fullUserWord = tileText.join("")
   }
 
   const tile = [
@@ -231,7 +234,7 @@ function checkForCorrectLetters () {
       tile[i].style.backgroundColor="var(--correct-color)"
       allreadyChecked[i] = `${tileText[i]}`;
     }else if (word.includes(tileText[i])){
-      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i])) && !(tileText[i+1, i-1, i+2, i-2, i+3, i-3, i+4, i-4, i+5, i-5] === word[i+1, i-1, i+2, i-2, i+3, i-3, i+4, i-4, i+5, i-5])) {
+      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i])) && (fullUserWord.split(tileText[i]).length - 1 <= countArrayValues(word, tileText[i]))) {
         tile[i].style.backgroundColor="var(--semicorrect-color)"
         allreadyChecked[i] = `${tileText[i]}`;
       }else{

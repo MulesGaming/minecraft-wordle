@@ -1,6 +1,6 @@
 {
   "_note1": "This json file contains the words for Mules Gaming's Minecraft Wordle",
-  "_note2": "Check out the Minecraft Wordle here: *url*",
+  "_note2": "Check out the Minecraft Wordle here: https://minecraftwordle.mulesgaming.com/",
   "_note3": "Don't continue if you don't want word spoilers!!",
   "words": [
     {"word": ["s","w","o","r","d"], "about": "The sword is a combat weapon in Minecraft. It comes in 6 types: wood, stone, iron, gold, diamond, and netherite.", "wiki": "https://minecraft.fandom.com/wiki/Sword"},

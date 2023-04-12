@@ -48,7 +48,7 @@ function setThemeDark () {
   }
   // Change Icon
   let themeSwitcherIcon = document.getElementById("themeSwitcherText")
-  themeSwitcherIcon.innerHTML = "light mode"
+  themeSwitcherIcon.innerHTML = "light"
   // Insert CSS file for dark mode
   var darkModeCSSLink = document.createElement("link");
   darkModeCSSLink.setAttribute("rel", "stylesheet");

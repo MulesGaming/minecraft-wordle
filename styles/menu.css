@@ -12,7 +12,7 @@
 .theme-switcher,
 .info-box{
   font-family: Font Icons, Roboto, Arial;
-  color: black;
+  color: rgb(154, 154, 154);
   cursor: pointer;
   width: 25px;
   font-size: 30px;
@@ -25,7 +25,7 @@
 }
 
 .theme-switcher-text{
-  color: black;
+  color: rgb(154, 154, 154);
   text-decoration: none;
 }
 

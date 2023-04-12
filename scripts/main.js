@@ -183,7 +183,7 @@ function onEnter () {
 // Check for loss
 
 function checkForLoss () {
-  if (tileRow > 6){
+  if (tileRow > 6 && !(hasWon === true)){
     let correctWord = document.getElementById("correctWordWarning")
     correctWord.style.visibility="visible";
     canType = 0
@@ -191,6 +191,10 @@ function checkForLoss () {
     clearStreak ()
   }
 }
+
+//
+
+let hasWon = false;
 
 // Check how any of a value are in a array
 
@@ -265,7 +269,8 @@ function checkForCorrectLetters () {
 }
 
 function win () {
-  addToStreak(1)
-  showMenuInit ()
-  canType = 0
+  addToStreak(1);
+  showMenuInit ();
+  canType = 0;
+  hasWon = true;
 }

@@ -80,3 +80,28 @@ function copyLink (url) {
   navigator.clipboard.writeText(url);
   console.log("Coped url: " + url + " to clipboard.")
 }
+
+// Info box
+
+const infoMenu = document.getElementById("infoMenu");
+
+function openInfoBox () {
+  infoMenu.style.visibility = "visible";
+}
+
+function minimizeInfoMenu () {
+  infoMenu.style.visibility = "hidden";
+}
+
+// Has seen info popup
+
+const hasSeenInfoPopup = localStorage.getItem("hasSeenInfoPopup");
+
+if (!(hasSeenInfoPopup === "true")) {
+  showInfoPopupFirst ()
+}
+
+function showInfoPopupFirst () {
+  localStorage.setItem("hasSeenInfoPopup", "true");
+  openInfoBox ();
+}

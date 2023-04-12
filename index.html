@@ -71,12 +71,31 @@ z-index: 100;
         </ul>
       </div>
     </section>
+    <section class="info-menu" id="infoMenu">
+      <div>
+        <h1 class="how-to-play-header">How to Play</h1>
+        <!-- Close -->
+        <button class="close-menu-button" id="closeMenu" onclick="minimizeInfoMenu()">X</button>
+      </div>
+      <div class="menu-body">
+        <p class="about-word" id="aboutWord">To play the Minecraft Wordle you can use the on screen keyboard or computer keyboard to enter letters. When a letter is in the correct spot, <span class="green-tile-demo">it's this green</span> color. When the letter is in the wrong spot but in the word <span class="yellow-tile-demo">it's this yellow</span> color, and if the letter is not in the word at all, <span class="gray-tile-demo">it's this gray</span> color.</p>
+        <br>
+        <div class="info-menu-example"><span>For inctence if the word was "sword" and you entered slows the tiles would look like this: </span><div>
+          <div class="tile-demo green-demo-tile"><span class="demo-letter">S</span></div>
+          <div class="tile-demo gray-demo-tile"><span class="demo-letter">L</span></div>
+          <div class="tile-demo green-demo-tile"><span class="demo-letter">O</span></div>
+          <div class="tile-demo yellow-demo-tile"><span class="demo-letter">W</span></div>
+          <div class="tile-demo gray-demo-tile"><span class="demo-letter">S</span></div>
+        </div>
+      </div>
+    </section>
     <!-- Main everything -->
     <main class="main" id="main">
     <!-- Menu Icons -->
     <section class="menu-icons" id="menuIconContanier">
       <div class="theme-switcher"><a class="theme-switcher-text" id="themeSwitcherText" href="?theme=dark">dark mode</a></div>
       <div class="menu-show" id="showMenu"></div>
+      <div class="info-box"><span class="info-box-text" id="infoBoxText" onclick="openInfoBox()">info</span></div>
     </section>
       <!-- Header and description -->
       <h1 class="header" id="header">Minecraft Wordle</h1>

@@ -238,7 +238,7 @@ function checkForCorrectLetters () {
       tile[i].style.backgroundColor="var(--correct-color)"
       allreadyChecked[i] = `${tileText[i]}`;
      }else if (word.includes(tileText[i])){
-      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i])) && (countArrayValues(allreadyChecked, tileText[i]) - 1 <= countArrayValues(word, tileText[i])) && !(tileText[i] === tileText[i + 1] && tileText[i + 1] === word[i + 1]) && !(tileText[i] === tileText[i + 2] && tileText[i + 2] === word[i + 2]) && !(tileText[i] === tileText[i + 3] && tileText[i + 3] === word[i + 3]) && !(tileText[i] === tileText[i + 4] && tileText[i + 4] === word[i + 4]) && !(tileText[i] === tileText[i + 5] && tileText[i + 5] === word[i + 5])) {
+      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i])) && (countArrayValues(allreadyChecked, tileText[i]) - 1 <= countArrayValues(word, tileText[i])) && !/*(countArrayValues(word, tileText[i]) < countArrayValues(tileText, tileText[i]) &&*/ (tileText[i] === tileText[i + 1] && tileText[i + 1] === word[i + 1]) && !(tileText[i] === tileText[i + 2] && tileText[i + 2] === word[i + 2]) && !(tileText[i] === tileText[i + 3] && tileText[i + 3] === word[i + 3]) && !(tileText[i] === tileText[i + 4] && tileText[i + 4] === word[i + 4]) && !(tileText[i] === tileText[i + 5] && tileText[i + 5] === word[i + 5])) {
         tile[i].style.backgroundColor="var(--semicorrect-color)"
         allreadyChecked[i] = `${tileText[i]}`;
       }else{

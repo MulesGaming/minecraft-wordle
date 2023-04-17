@@ -37,3 +37,11 @@
   padding: 5px 15px 5px 15px;
   font-size: 35px;
 }
+
+/* Mobile */
+
+@media (max-width: 610px) {
+    main{
+     visibility: hidden;
+    }
+}

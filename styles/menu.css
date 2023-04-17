@@ -170,9 +170,17 @@
 
 .share{
   list-style-type: none;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr);
+  grid-template-columns: minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr);
   display: grid;
   min-width: 0;
+  overflow: scroll;
+  overflow-y: hidden;
+  padding-left: 0px;
+  scrollbar-width: none;
+}
+
+.share::-webkit-scrollbar{
+  display: none;
 }
 
 .twitter-share,

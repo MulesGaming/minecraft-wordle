@@ -196,6 +196,21 @@ function checkForLoss () {
 
 let hasWon = false;
 
+// Check if word is in word list
+
+function checkWordList (userWord) {
+  fetch("/word-list.json").then((result)=>{
+    return result.json()
+  }).then((wordListFile)=>{
+    const wordList = wordListFile.words
+    if (wordList.includes(userWord)) {
+      console.log("In word list")
+    }else {
+      console.log("Not in word list!") 
+    }
+  })
+}
+
 // Check how any of a value are in a array
 
 function countArrayValues(array, value) {

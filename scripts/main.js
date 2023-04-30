@@ -198,17 +198,24 @@ let hasWon = false;
 
 // Check if word is in word list
 
-function checkWordList (userWord) {
-  fetch("/word-list.json").then((result)=>{
-    return result.json()
-  }).then((wordListFile)=>{
-    const wordList = wordListFile.words
+function isInWordList (userWord) {
+  let isInWordList = null;
+  
+  async function wordListMainFetch() {
+    //
+    getJson('https://minecraftwordle.mulesgaming.com/word-list.json').then(data => setInWordValue (data));
+  };
+  
+  function setInWordValue (data) {
+    const wordList = data.words
     if (wordList.includes(userWord)) {
-      console.log("In word list")
-    }else {
-      console.log("Not in word list!") 
+      isInWordList = true;
     }
-  })
+  }
+  
+  wordListMainFetch();
+
+  return isInWordList;
 }
 
 // Check how any of a value are in a array

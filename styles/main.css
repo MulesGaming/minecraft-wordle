@@ -16,6 +16,7 @@ main{
 
 .link{
   color: white;
+  text-decoration: underline;
 }
 
 /* Custom highlight color */

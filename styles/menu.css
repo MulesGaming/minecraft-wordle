@@ -222,3 +222,14 @@
   cursor: pointer;
 }
 
+/* More */
+
+.more{
+  padding-top: 10px;
+}
+
+.contact,
+.play-agian{
+  margin-bottom: 10px;
+  display: block;
+}

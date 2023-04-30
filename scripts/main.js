@@ -45,6 +45,38 @@ function setWord (wordData) {
 
 mainFetch();
 
+// Check if word is in word list
+
+function checkWordList () {
+  // Define user word
+  const tileSpan = [
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 1), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 2), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 3), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 4), 
+    document.querySelector(`#guessRow` + tileRow + ` .tile-letter` + 5)
+  ]
+
+  const tileText = [];
+
+  let fullUserWord;
+
+  for (let i = 0; i < 5; i++) {
+    tileText[i] = tileSpan[i].textContent
+    fullUserWord = tileText.join("")
+  }
+  // Check
+  if (!(isInWordList (fullUserWord) === true)) {
+    notRealWord ()
+    return "stop"
+  } else if (isInWordList (fullUserWord) === true) {
+    console.log(fullUserWord + " is in the word list.")
+  }else{
+    console.error("Unknown if inputted word is a real word.")
+    return "stop"
+  }
+}
+
 // Make correct word popup to the word
 
 function setCorrectWordWarning (word) {
@@ -169,6 +201,10 @@ function onEnter () {
   }else if (tileNumber === 6) {
     tileNumber = 1
     fullFirstWord = ""
+    if (checkWordList () === "stop") {
+      tileNumber = 6
+      return
+    }
     checkForCorrectLetters ()
     tileRow = tileRow + 1
     checkForLoss()
@@ -196,32 +232,19 @@ function checkForLoss () {
 
 let hasWon = false;
 
-// Check if word is in word list
-
-function isInWordList (userWord) {
-  let isInWordList = null;
-  
-  async function wordListMainFetch() {
-    //
-    getJson('https://minecraftwordle.mulesgaming.com/word-list.json').then(data => setInWordValue (data));
-  };
-  
-  function setInWordValue (data) {
-    const wordList = data.words
-    if (wordList.includes(userWord)) {
-      isInWordList = true;
-    }
-  }
-  
-  wordListMainFetch();
-
-  return isInWordList;
-}
-
 // Check how any of a value are in a array
 
 function countArrayValues(array, value) {
     return array.filter((v) => (v === value)).length;
+}
+
+// Show real word popup
+
+function notRealWord () {
+  console.log("The word that was entered is not a real word!")
+  const realWordWarning = document.getElementById("notRealWord")
+  realWordWarning.style.visibility="visible";
+  setTimeout( function FetchData() { realWordWarning.style.visibility="hidden"; }, 5000);
 }
 
 // Correct awnser checker

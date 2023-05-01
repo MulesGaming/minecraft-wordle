@@ -69,6 +69,7 @@
     {"word": ["f","r","a","m","e"], "about": "Item frames are a item in Minecraft crafted with leather and sticks that is used to display items.", "wiki": "https://minecraft.fandom.com/wiki/Item_Frame"},
     {"word": ["l","e","v","e","r"], "about": "Levers are a redstone component in Minecraft that is crafted with one cobblestone and a stick. When flipped on it emits a redstone signal until flipped into the off position.", "wiki": "https://minecraft.fandom.com/wiki/Lever"},
     {"word": ["t","u","n","i","c"], "about": "A tunic is the term used for a leather chestplate. Leather tunics provide three armor points. Chestplate are one of four armor pieces in a set.", "wiki": "https://minecraft.fandom.com/wiki/Chestplate"},
+    {"word": ["b","u","i","l","d"], "about": "Building is a fundamental part of Minecraft. You can build by placing down a block to put together. You can build anything you want with the wide variety of blocks in the game. There are also naturally spawning buildings such as villages or ruined portals.", "wiki": "https://minecraft.fandom.com/wiki/Structure"},
     {"word": ["a","l","l","a","y"], "about": "The Allay is a mob in Minecraft that flies around and picks up items and gives them to a player or noteblock. You can find them in Pillager outposts and woodland mansions.", "wiki": "https://minecraft.fandom.com/wiki/Allay"}
   ]
 }

@@ -68,6 +68,7 @@
     {"word": ["i","g","l","o","o"], "about": "Igloos are a structure in Minecraft that can be found in snowy tigas and plains. There is a bed, crafting table, furnace, bed, and redstone torch on the top level. Sometimes there is a trap door beneath the carpet on the floor that leads to a brewing stand, chest, villager, and zombie villager.", "wiki": "https://minecraft.fandom.com/wiki/Igloo"},
     {"word": ["f","r","a","m","e"], "about": "Item frames are a item in Minecraft crafted with leather and sticks that is used to display items.", "wiki": "https://minecraft.fandom.com/wiki/Item_Frame"},
     {"word": ["l","e","v","e","r"], "about": "Levers are a redstone component in Minecraft that is crafted with one cobblestone and a stick. When flipped on it emits a redstone signal until flipped into the off position.", "wiki": "https://minecraft.fandom.com/wiki/Lever"},
-    {"word": ["t","u","n","i","c"], "about": "A tunic is the term used for a leather chestplate. Leather tunics provide three armor points. Chestplate are one of four armor pieces in a set.", "wiki": "https://minecraft.fandom.com/wiki/Chestplate"}
+    {"word": ["t","u","n","i","c"], "about": "A tunic is the term used for a leather chestplate. Leather tunics provide three armor points. Chestplate are one of four armor pieces in a set.", "wiki": "https://minecraft.fandom.com/wiki/Chestplate"},
+    {"word": ["a","l","l","a","y"], "about": "The Allay is a mob in Minecraft that flies around and picks up items and gives them to a player or noteblock. You can find them in Pillager outposts and woodland mansions.", "wiki": "https://minecraft.fandom.com/wiki/Allay"}
   ]
 }

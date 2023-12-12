@@ -1,7 +1,7 @@
 /* Define vars */
 
 :root {
-  --incorrect-color: rgb(92, 92, 92);
+  --incorrect-color: rgb(59 57 57);
   --semicorrect-color: rgb(173, 173, 47);
   --correct-color: rgb(2, 158, 2);
   --tile-background-color: rgb(33, 29, 29)

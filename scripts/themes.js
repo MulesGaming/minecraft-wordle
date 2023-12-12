@@ -33,6 +33,8 @@ if (theme === "dark") {
   setThemeDark ()
 }else if (theme === "light"){
   setThemeLight ()
+}else if (theme === "super-secret-grass-mode"){
+  setThemeGrass ()
 }else {
   console.log("Theme is not set. Using light theme (default).")
 }
@@ -61,3 +63,14 @@ function setThemeLight () {
   console.log("Using light theme")
   // localStorage.setItem("userDefaultTheme", "light");
 }
+
+function setThemeGrass () {
+  console.log("Using super-secret grass theme!")
+  // Insert CSS file
+  var grassModeCSSLink = document.createElement("link");
+  grassModeCSSLink.setAttribute("rel", "stylesheet");
+  grassModeCSSLink.setAttribute("href", "styles/themes/grass.css");
+  document.getElementsByTagName("head")[0].appendChild(grassModeCSSLink);
+
+}
+

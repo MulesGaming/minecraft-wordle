@@ -3,7 +3,7 @@ body{
   margin: 0px;
   font-family: Roboto, Arial;
   color: white;
-  background-image: url("/media/img/grass_block.png");
+  background-color: rgb(53, 42, 42);
 }
 
 .capital-letter{
@@ -11,7 +11,10 @@ body{
 }
 
 main{
-  background-color: rgb(53, 42, 42);
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  right: 15%;
 }
 
 .link{

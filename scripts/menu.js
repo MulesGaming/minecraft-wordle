@@ -60,19 +60,21 @@ function setCurrentStreakMenu () {
 
 var currentPageURL = window.location.href;
 
+var shareMessage = `Check out this Minecraft Wordle at ${currentPageURL}`
+
 setTwitterURL ()
 setEmailLink ()
 
 // Twitter
 function setTwitterURL () {
   let twitterLink = document.getElementById("twitterLink");
-  var twitterTweetLink = `https://twitter.com/intent/tweet?url=${currentPageURL}`;
+  var twitterTweetLink = `https://twitter.com/intent/tweet?text=${shareMessage}`;
   twitterLink.setAttribute('href', twitterTweetLink);
 }
 // Email
 function setEmailLink () {
   let emailLink = document.getElementById("emailLink");
-  var emailSendLink = `mailto:?subject=Minecraft%20Wordle&body=${currentPageURL}`;
+  var emailSendLink = `mailto:?subject=Minecraft%20Wordle&body=${shareMessage}`;
   emailLink.setAttribute('href', emailSendLink);
 }
 // Copy Link
@@ -80,6 +82,19 @@ function copyLink (url) {
   navigator.clipboard.writeText(url);
   console.log("Coped url: " + url + " to clipboard.")
 }
+// Built in
+const shareButton = document.getElementById('shareButton')
+shareButton.addEventListener('click', event => {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Minecraft Wordle',
+      url: currentPageURL
+    }).then(() => {
+      console.log('Shared!');
+    })} else {
+    alert('Your Browser/OS dosn\'t support this method of sharing!');
+  }
+});
 
 // Info box
 

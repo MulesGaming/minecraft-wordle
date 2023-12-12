@@ -29,6 +29,10 @@
   text-decoration: none;
 }
 
+.super-secret-grass-mode-active{
+  text-align: left;
+}
+
 /* Tile demo text */
 
 .info-menu{
@@ -170,7 +174,7 @@
 
 .share{
   list-style-type: none;
-  grid-template-columns: minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr);
+  grid-template-columns: minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr);
   display: grid;
   min-width: 0;
   overflow: scroll;
@@ -185,7 +189,8 @@
 
 .twitter-share,
 .email-share,
-.link-share{
+.link-share,
+.share-share{
   background: none;
   border: none;
   display: block;

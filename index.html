@@ -68,11 +68,12 @@ z-index: 100;
           <li><a href="#" class="twitter-link" id="twitterLink" target="_blank"><button class="twitter-share"><img alt="Twitter logo" title="Twitter icon" src="https://www.mulesgaming.com/media/images/twitter_logo.png" class="share-image">Share to Twitter</button></a></li>
           <li><a href="#" class="email-link" id="emailLink" target="_blank"><button class="email-share"><img alt="Email icon" title="Email icon, from Google fonts" src="/media/img/email-icon.svg" class="share-image">Share as email</button></a></li>
           <li><button class="link-share" onclick="copyLink (currentPageURL)"><img alt="Link icon" title="Link icon, from Google fonts" src="/media/img/link-icon.svg" class="share-image">Copy share link </button></li>
+          <li><button class="share-share" id="shareButton" onclick="copyLink (currentPageURL)"><img alt="Share icon" title="Share icon, from Google fonts" src="/media/img/share-icon.svg" class="share-image">Share via popup </button></li>
         </ul>
       </div>
       <div class="more" id="menuMore">
         <span class="contact" id="menuContact">Found a problem? Typo? Have a suggestion? You can make a <a href="https://github.com/MulesGaming/minecraft-wordle/issues" target="_blank" class="link">GitHub issue</a>.</span><br>
-        <span class="play-agian" id="menuPlayAgian">To play again, all you need to do is <span onclick="location.reload();" class="link">reload</span> the page!</span>
+        <span class="play-agian" id="menuPlayAgian"><span onclick="location.reload();" class="link">Play agian</span></span>
       </div>
     </section>
     <section class="info-menu" id="infoMenu">
@@ -91,16 +92,17 @@ z-index: 100;
           <div class="tile-demo yellow-demo-tile"><span class="demo-letter">W</span></div>
           <div class="tile-demo gray-demo-tile"><span class="demo-letter">S</span></div>
         </div>
+        <div class="super-secret-grass-mode-active"><a href="?theme=super-secret-grass-mode"><img src="/media/img/grass_block.png" alt="Grass" title="Super secret grass mode!"></a></div>
       </div>
     </section>
-    <!-- Main everything -->
-    <main class="main" id="main">
     <!-- Menu Icons -->
     <section class="menu-icons" id="menuIconContanier">
       <div class="theme-switcher" title="Change theme"><a class="theme-switcher-text" id="themeSwitcherText" href="?theme=dark">dark</a></div>
       <div class="menu-show" id="showMenu" title="Show Menu"></div>
       <div class="info-box" title="How to play"><span class="info-box-text" id="infoBoxText" onclick="openInfoBox()">info</span></div>
     </section>
+    <!-- Main everything -->
+    <main class="main" id="main">
       <!-- Header and description -->
       <h1 class="header" id="header">Minecraft Wordle</h1>
       <!-- Warnings-->
@@ -112,7 +114,8 @@ z-index: 100;
         <!-- Error loading word -->
         <div class="error word-load-error" id="errorLoadingWord">There was a problem loading the word! Try reloading the page</div>
         <!-- No JS warning -->
-        <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might occur because you have javascript disabled in browser settings, or have a extension that disables it.</div></noscript>      </section>
+        <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might occur because you have javascript disabled in browser settings, or have a extension that disables it.</div></noscript>
+      </section>
       <div class="desc" id="descWarnings">
         <p class="desc" id="description">Minecraft Wordle is a version of the <a class="link wordle-link" target="_blank" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> made as a side project by <a class="link mules-link" target="_blank" href="https://www.mulesgaming.com">Mules Gaming</a>.</p>
       </div>

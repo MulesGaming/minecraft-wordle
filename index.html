@@ -101,21 +101,21 @@ z-index: 100;
       <div class="menu-show" id="showMenu" title="Show Menu"></div>
       <div class="info-box" title="How to play"><span class="info-box-text" id="infoBoxText" onclick="openInfoBox()">info</span></div>
     </section>
+    <!-- Warnings-->
+    <section class="warnings" id="warnings">
+      <div class="error too-many-letters" id="tooManyLetters">Too many letters!</div>
+      <div class="error not-enough-letters" id="notEnoughLetters">Not enough letters!</div>
+      <div class="error not-real-word" id="notRealWord">Word is not in word list!</div>
+      <div class="error correct-letter" id="correctWordWarning">The correct word was: <!-- JS inserts correct word here--></div>
+      <!-- Error loading word -->
+      <div class="error word-load-error" id="errorLoadingWord">There was a problem loading the word! Try reloading the page</div>
+      <!-- No JS warning -->
+      <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might occur because you have javascript disabled in browser settings, or have a extension that disables it.</div></noscript>
+    </section>
     <!-- Main everything -->
     <main class="main" id="main">
       <!-- Header and description -->
       <h1 class="header" id="header">Minecraft Wordle</h1>
-      <!-- Warnings-->
-      <section class="warnings" id="warnings">
-        <div class="error too-many-letters" id="tooManyLetters">Too many letters!</div>
-        <div class="error not-enough-letters" id="notEnoughLetters">Not enough letters!</div>
-        <div class="error not-real-word" id="notRealWord">Word is not in word list!</div>
-        <div class="error correct-letter" id="correctWordWarning">The correct word was: <!-- JS inserts correct word here--></div>
-        <!-- Error loading word -->
-        <div class="error word-load-error" id="errorLoadingWord">There was a problem loading the word! Try reloading the page</div>
-        <!-- No JS warning -->
-        <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might occur because you have javascript disabled in browser settings, or have a extension that disables it.</div></noscript>
-      </section>
       <div class="desc" id="descWarnings">
         <p class="desc" id="description">Minecraft Wordle is a version of the <a class="link wordle-link" target="_blank" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> made as a side project by <a class="link mules-link" target="_blank" href="https://www.mulesgaming.com">Mules Gaming</a>.</p>
       </div>

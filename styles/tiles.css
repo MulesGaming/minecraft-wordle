@@ -30,10 +30,19 @@
 
 /* Mobile */
 
+@media (min-width:541px) {
+  .tile-letter{
+    font-size: 1.6em;
+  }
+}
+
 @media (max-width:540px) {
   .tile::before{
     padding-bottom: 40px;
     padding-left: 40px;  
+  }
+  .tile-letter{
+    font-size: 1.4em;
   }
 }
 
@@ -42,12 +51,18 @@
     padding-bottom: 30px;
     padding-left: 30px;  
   }
+  .tile-letter{
+    font-size: 1.2em;
+  }
 }
 
 @media (max-width:320px) {
   .tile::before{
     padding-bottom: 15px;
     padding-left: 15px;  
+  }
+  .tile-letter{
+    font-size: 0.9em;
   }
 }
 
@@ -58,7 +73,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 25px;
   font-weight: 500;
   text-transform: uppercase;
 }

@@ -223,8 +223,8 @@ function checkForLoss () {
     let correctWord = document.getElementById("correctWordWarning")
     correctWord.style.visibility="visible";
     canType = 0
-    showMenuInit()
     clearStreak ()
+    showMenuInit()
   }
 }
 

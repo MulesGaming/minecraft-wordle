@@ -278,43 +278,54 @@ function checkForCorrectLetters () {
     document.querySelector(`#guessRow` + tileRow + ` .tile` + 5)
   ] 
 
+  //
+
+  let currentLetterChecking = 0;
+  let wordMatches = []
+  let wordClone = word.slice()
+
+  // Check for greens
   for (let i = 0; i < 5; i++) {
-    if (tileText[i] === word[i]){
-      // Check for correct
+    if ((tileText[i] === word[i])){
+      wordMatches[i] = 1
+      wordClone.splice(wordClone.indexOf(tileText[i]), 1);
+    }else{
+      wordMatches[i] = 0
+    }
+  }
+
+  // Check for yellows
+  for (let i = 0; i < 5; i++) {
+    if (wordMatches[i] === 0) {
+      if (word.includes(tileText[i]) && wordClone.includes(tileText[i])) {
+        wordMatches[i] = 2
+        wordClone.splice(wordClone.indexOf(tileText[i]), 1);
+      }else{
+        wordMatches[i] = 0
+      }
+    }
+  }
+  // Set Tiles
+  for (let i = 0; i < 5; i++) {
+    if(wordMatches[i] === 0){
+      tile[i].style.backgroundColor="var(--incorrect-color)"
+      let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
+      if (!currentLetterKey.classList.contains("correct-key")) {
+        currentLetterKey.style = "background-color: var(--incorrect-color, gray);";
+      }
+    }else if(wordMatches[i] === 1){
       tile[i].style.backgroundColor="var(--correct-color)"
-      allreadyChecked[i] = `${tileText[i]}`;
-      // Set keyboard tile color
       let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
       currentLetterKey.classList.add("correct-key");
       currentLetterKey.style = "background-color: var(--correct-color, green);";
-    }else if (word.includes(tileText[i])){
-      // Check for semicorrect
-      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i])) && (countArrayValues(allreadyChecked, tileText[i]) - 1 <= countArrayValues(word, tileText[i])) && !(tileText[i] === tileText[i + 1] && tileText[i + 1] === word[i + 1])) {
-        tile[i].style.backgroundColor="var(--semicorrect-color)"
-        allreadyChecked[i] = `${tileText[i]}`;
-        // Set keyboard tile color
-        let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
-        if (!currentLetterKey.classList.contains("correct-key")) {
-          currentLetterKey.style = "background-color: var(--semicorrect-color, yellow);";
-        }
-      }else{
-        // Check for incorrect
-        tile[i].style.backgroundColor="var(--incorrect-color)"
-        allreadyChecked[i] = `${tileText[i]}`;
-        // Set keyboard tile color
-        let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
-        if ((!word.includes(tileText[i]))) {
-          currentLetterKey.style = "background-color: var(--incorrect-color, gray);";
-        }
+    }else if(wordMatches[i] === 2){
+      tile[i].style.backgroundColor="var(--semicorrect-color)"
+      let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
+      if (!currentLetterKey.classList.contains("correct-key")) {
+        currentLetterKey.style = "background-color: var(--semicorrect-color, yellow);";
       }
-    }else {
-        tile[i].style.backgroundColor="var(--incorrect-color)"
-        allreadyChecked[i] = `${tileText[i]}`;
-        // Set keyboard tile color
-        let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
-        if (!(word.includes(tileText[i]))) {
-          currentLetterKey.style = "background-color: var(--incorrect-color, gray);";
-        }
+    }else{
+      console.error('Could not assign letter!')
     }
   }
 

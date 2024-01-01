@@ -232,7 +232,7 @@ function checkForLoss () {
 
 let hasWon = false;
 
-// Check how any of a value are in a array
+// Check how any of any item are in a array
 
 function countArrayValues(array, value) {
     return array.filter((v) => (v === value)).length;
@@ -280,6 +280,7 @@ function checkForCorrectLetters () {
 
   for (let i = 0; i < 5; i++) {
     if (tileText[i] === word[i]){
+      // Check for correct
       tile[i].style.backgroundColor="var(--correct-color)"
       allreadyChecked[i] = `${tileText[i]}`;
       // Set keyboard tile color
@@ -287,7 +288,8 @@ function checkForCorrectLetters () {
       currentLetterKey.classList.add("correct-key");
       currentLetterKey.style = "background-color: var(--correct-color, green);";
     }else if (word.includes(tileText[i])){
-      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i])) && (countArrayValues(allreadyChecked, tileText[i]) - 1 <= countArrayValues(word, tileText[i])) && !/*(countArrayValues(word, tileText[i]) < countArrayValues(tileText, tileText[i]) &&*/ (tileText[i] === tileText[i + 1] && tileText[i + 1] === word[i + 1]) && !(tileText[i] === tileText[i + 2] && tileText[i + 2] === word[i + 2]) && !(tileText[i] === tileText[i + 3] && tileText[i + 3] === word[i + 3]) && !(tileText[i] === tileText[i + 4] && tileText[i + 4] === word[i + 4]) && !(tileText[i] === tileText[i + 5] && tileText[i + 5] === word[i + 5])) {
+      // Check for semicorrect
+      if (!(countArrayValues(allreadyChecked, tileText[i]) >= countArrayValues(word, tileText[i])) && (countArrayValues(allreadyChecked, tileText[i]) - 1 <= countArrayValues(word, tileText[i])) && !(tileText[i] === tileText[i + 1] && tileText[i + 1] === word[i + 1])) {
         tile[i].style.backgroundColor="var(--semicorrect-color)"
         allreadyChecked[i] = `${tileText[i]}`;
         // Set keyboard tile color
@@ -296,6 +298,7 @@ function checkForCorrectLetters () {
           currentLetterKey.style = "background-color: var(--semicorrect-color, yellow);";
         }
       }else{
+        // Check for incorrect
         tile[i].style.backgroundColor="var(--incorrect-color)"
         allreadyChecked[i] = `${tileText[i]}`;
         // Set keyboard tile color

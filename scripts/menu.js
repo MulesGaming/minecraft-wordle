@@ -60,7 +60,7 @@ function setCurrentStreakMenu () {
 
 var currentPageURL = window.location.href;
 
-var shareMessage = `Check out this Minecraft Wordle at ${currentPageURL}`
+var shareMessage = `I played the Minecraft Wordle! You can to here: ${url}`
 
 setTwitterURL ()
 setEmailLink ()

@@ -187,10 +187,10 @@
   display: none;
 }
 
-.twitter-share,
-.email-share,
-.link-share,
-.share-share{
+.twt-share-button,
+.email-share-button,
+.link-share-button,
+.share-popup-button{
   background: none;
   border: none;
   display: block;
@@ -202,7 +202,7 @@
 }
 
 .email-link,
-.twitter-link{
+.twt-share-link{
   color: black;
   text-decoration: none;
 }

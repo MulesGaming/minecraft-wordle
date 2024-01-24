@@ -60,6 +60,8 @@ function setCurrentStreakMenu () {
 
 var currentPageURL = window.location.href;
 
+const url = currentPageURL
+
 var shareMessage = `I played the Minecraft Wordle! You can to here: ${url}`
 
 setTwitterURL ()
@@ -83,7 +85,7 @@ function copyLink (url) {
   console.log("Coped url: " + url + " to clipboard.")
 }
 // Built in
-const shareButton = document.getElementById('shareButton')
+const shareButton = document.getElementById('sharePopupButton')
 shareButton.addEventListener('click', event => {
   if (navigator.share) {
     navigator.share({

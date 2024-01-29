@@ -58,6 +58,7 @@ main{
   text-align: center;
   visibility: hidden;
   z-index: 100;
+  position: fixed;
 }
 
 /* Header and description */

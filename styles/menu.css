@@ -134,6 +134,7 @@
   /* Text */
   color: rgb(255, 255, 255);
   font-size: 18px;
+  user-select: none;
   /* Pos */
   position: absolute;
   top: 10px;

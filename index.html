@@ -48,7 +48,7 @@ z-index: 100;
     <!-- Popup menu (hidden by default) -->
     <section class="main-menu" id="mainMenu">
       <div class="top">
-        <h1 class="facts-header">Facts about today&#39;s word</h1>
+        <h1 class="facts-header">Facts about your word</h1>
         <!-- Close -->
         <button class="close-menu-button" id="closeMenu" onclick="minimizeMenu()">X</button>
       </div>
@@ -108,7 +108,7 @@ z-index: 100;
       <div class="error not-real-word" id="notRealWord">Word is not in word list!</div>
       <div class="error correct-letter" id="correctWordWarning">The correct word was: <!-- JS inserts correct word here--></div>
       <!-- Error loading word -->
-      <div class="error word-load-error" id="errorLoadingWord">There was a problem loading the word! Try reloading the page</div>
+      <div class="error word-load-error" id="errorLoadingWord">There was a problem loading the word! Try <span onclick="location.reload();" class="link">reloading</span> the page</div>
       <!-- No JS warning -->
       <noscript class="no-js"><div>JAVASCRIPT IS NOT ENABLED!! Javascript is the language that makes this website run. The Minecraft Wordle will NOT work without Javascript. This error might occur because you have javascript disabled in browser settings, or have a extension that disables it.</div></noscript>
     </section>

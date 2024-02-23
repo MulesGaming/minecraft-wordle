@@ -3,7 +3,7 @@
   <head>
     <title>Minecraft Wordle</title>
     <link rel="icon" type="image/x-icon" href="/media/img/logo.png">
-    <meta name="description" content="A Minecraft word game! Inspired by the original wordle.">
+    <meta name="description" content="A Minecraft version of the Wordle! Inspired by the original Wordle.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="Mules Gaming">
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="minecraftwordle.fun">
     <meta property="twitter:url" content="https://minecraftwordle.fun/">
-    <meta name="twitter:description" content="A Minecraft word game! Inspired by the original wordle.">
+    <meta name="twitter:description" content="The Wordle. But Minecraft!.">
     <meta name="twitter:image" content="https:/minecraftwordle.fun/media/img/logo.png">  
     <meta name="twitter:site" content="@mulesgaming">  
     <meta name="twitter:creator" content="@mulesgaming">
@@ -48,7 +48,7 @@ z-index: 100;
     <!-- Popup menu (hidden by default) -->
     <section class="main-menu" id="mainMenu">
       <div class="top">
-        <h2 class="facts-header">Facts about your word</h1>
+        <h2 class="facts-header">Facts about your word</h2>
         <!-- Close -->
         <button class="close-menu-button" id="closeMenu" onclick="minimizeMenu()">X</button>
       </div>
@@ -63,7 +63,7 @@ z-index: 100;
         <span class="current-streak" id="currentStreak">Your current streak is: <span id="currentStreakNumber"></span> words.</span>
       </div>
       <div class="share-wordle-holder">
-        <h2 class="share-header">Share</h1>
+        <h2 class="share-header">Share</h2>
         <ul class="share">
           <li><a href="#" class="twt-share-link" id="twitterLink" target="_blank"><button class="twt-share-button"><img alt="Twitter logo" title="Twitter icon" src="/media/img/twitter_logo.png" class="share-image">Share to Twitter</button></a></li>
           <li><a href="#" class="email-link" id="emailLink" target="_blank"><button class="email-share-button"><img alt="Email icon" title="Email icon, from Google fonts" src="/media/img/email-icon.svg" class="share-image">Share as email</button></a></li>
@@ -78,21 +78,24 @@ z-index: 100;
     </section>
     <section class="info-menu" id="infoMenu">
       <div>
-        <h2 class="how-to-play-header">How to Play</h1>
+        <h2 class="how-to-play-header">How to Play</h2>
         <!-- Close -->
         <button class="close-menu-button" id="closeMenu" onclick="minimizeInfoMenu()">X</button>
       </div>
       <div class="menu-body">
-        <p class="about-word" id="aboutWord">To play the Minecraft Wordle you can use the on screen keyboard or computer keyboard to enter letters. When a letter is in the correct spot, <span class="green-tile-demo">it's this green</span> color. When the letter is in the wrong spot but in the word <span class="yellow-tile-demo">it's this yellow</span> color, and if the letter is not in the word at all, <span class="gray-tile-demo">it's this gray</span> color.</p>
+        <p class="how-to-play" id="howToPlay">To play the Minecraft Wordle you can use the on screen keyboard or computer keyboard to enter letters. When a letter is in the correct spot, <span class="green-tile-demo">it's this green</span> color. When the letter is in the wrong spot but in the word <span class="yellow-tile-demo">it's this yellow</span> color, and if the letter is not in the word at all, <span class="gray-tile-demo">it's this gray</span> color.</p>
         <br>
-        <div class="info-menu-example"><span>For instance if the word was "sword" and you entered slows the tiles would look like this: </span><div>
+        <div class="info-menu-example"><span>For instance if the word was "sword" and you entered slows the tiles would look like this: </span></div>
+        <div id="tileDemos">
           <div class="tile-demo green-demo-tile"><span class="demo-letter">S</span></div>
           <div class="tile-demo gray-demo-tile"><span class="demo-letter">L</span></div>
           <div class="tile-demo green-demo-tile"><span class="demo-letter">O</span></div>
           <div class="tile-demo yellow-demo-tile"><span class="demo-letter">W</span></div>
           <div class="tile-demo gray-demo-tile"><span class="demo-letter">S</span></div>
         </div>
-        <div class="super-secret-grass-mode-active"><a href="?theme=super-secret-grass-mode"><img src="/media/img/grass_block.png" alt="Grass" title="Super secret grass mode!"></a></div>
+        <div class="super-secret-grass-mode-active">
+          <a href="?theme=super-secret-grass-mode"><img src="/media/img/grass_block.png" alt="Grass" title="Super secret grass mode!"></a>
+        </div>
       </div>
     </section>
     <!-- Menu Icons -->

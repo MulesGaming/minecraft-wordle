@@ -175,7 +175,7 @@
 
 .share{
   list-style-type: none;
-  grid-template-columns: minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr);
+  grid-template-columns: minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr) minmax(auto, 2fr);
   display: grid;
   min-width: 0;
   overflow: scroll;
@@ -191,7 +191,8 @@
 .twt-share-button,
 .email-share-button,
 .link-share-button,
-.share-popup-button{
+.share-popup-button,
+.bsky-share-button{
   background: none;
   border: none;
   display: block;
@@ -203,7 +204,8 @@
 }
 
 .email-link,
-.twt-share-link{
+.twt-share-link,
+.bsky-share-link{
   color: black;
   text-decoration: none;
 }

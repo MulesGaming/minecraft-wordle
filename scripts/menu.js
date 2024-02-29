@@ -66,6 +66,7 @@ var shareMessage = `I played the Minecraft Wordle! You can to here: ${url}`
 
 setTwitterURL ()
 setEmailLink ()
+setBskyURL ()
 
 // Twitter
 function setTwitterURL () {
@@ -97,6 +98,12 @@ shareButton.addEventListener('click', event => {
     alert('Your Browser/OS dosn\'t support this method of sharing!');
   }
 });
+// Bluesky
+function setBskyURL () {
+  let bskyLink = document.getElementById("bskyLink");
+  var bskyPostLink = `https://bsky.app/intent/compose?text=${shareMessage}`;
+  bskyLink.setAttribute('href', bskyPostLink);
+}
 
 // Info box
 

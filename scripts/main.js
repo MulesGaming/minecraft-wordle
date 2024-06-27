@@ -310,19 +310,21 @@ function checkForCorrectLetters () {
     if(wordMatches[i] === 0){
       tile[i].style.backgroundColor="var(--incorrect-color)"
       let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
-      if (!currentLetterKey.classList.contains("correct-key")) {
+      if ((!currentLetterKey.classList.contains("correct-key")) && (!currentLetterKey.classList.contains("semicorrect-key"))) {
         currentLetterKey.style = "background-color: var(--incorrect-color, gray);";
       }
     }else if(wordMatches[i] === 1){
       tile[i].style.backgroundColor="var(--correct-color)"
       let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
       currentLetterKey.classList.add("correct-key");
+      currentLetterKey.classList.remove("semicorrect-key");
       currentLetterKey.style = "background-color: var(--correct-color, green);";
     }else if(wordMatches[i] === 2){
       tile[i].style.backgroundColor="var(--semicorrect-color)"
       let currentLetterKey = shadow.getElementById(`${tileText[i]}Key`);
       if (!currentLetterKey.classList.contains("correct-key")) {
         currentLetterKey.style = "background-color: var(--semicorrect-color, yellow);";
+        currentLetterKey.classList.add("semicorrect-key");
       }
     }else{
       console.error('Could not assign letter!')

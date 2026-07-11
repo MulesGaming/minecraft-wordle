@@ -94,22 +94,22 @@
     {"word": ["c","h","e","s","t"], "about": "A chest is a block used to store items.", "wiki": "https://minecraft.wiki/w/Chest"},
     {"word": ["s","c","u","t","e"], "about": "Scutes are items that baby turtles drop when they grow into adults. They can be used to craft turtle shells which can be used to brew the potion of the Turtle Master.", "wiki": "https://minecraft.wiki/w/Chest"},
     {"word": ["p","a","p","e","r"], "about": "Paper is an item crafted from sugar cane, required for crafting books, maps, firework rockets and banner patterns.", "wiki": "https://minecraft.wiki/w/Paper"},
-    {"word": ["w","h","e","a","t"], "about": "Wheat is an item primarily obtained by harvesting fully-grown wheat crops. It is used for crafting as well as to feed certain animals.", "wiki": "https://minecraft.wiki/w/Wheat"}
-	{"word": ["m","u","l","e","s"], "about": "Mules are a mix of a donkey and a horse when bred together!", "wiki": "https://minecraft.wiki/w/Mule"}
-	{"word": ["w","i","t","c","h"], "about": "Witches spawn in every biome but the deep dark and the mushroom fields.", "wiki": "https://minecraft.wiki/w/Witch"}
-	{"word": ["t","a","i","g","a"], "about": "The Taiga biome was added all the way back in 1.2.0 with a noticable difference with oak.", "wiki": "https://minecraft.wiki/w/Taiga"}
-	{"word": ["g","r","o","v","e"], "about": "Groves have spruce forests that grow on the side of the mountain it's connected too!", "wiki": "https://minecraft.wiki/w/Mountains#Grove"}
-	{"word": ["s","u","g","a","r"], "about": "Sugar could be used to create speed potions.", "wiki": "https://minecraft.wiki/w/Sugar"}
-	{"word": ["s","n","e","a","k"], "about": "Sneaking can actually increase your hide rate when around mobs.", "wiki": "https://minecraft.wiki/w/Sneaking"}
-	{"word": ["t","r","i","a","l"], "about": "We've all seen it and thought we were in the stronghold at one point.", "wiki": "https://minecraft.wiki/w/Trial_Chambers"}
-	{"word": ["t","r","a","c","k"], "about": "You can find tracks in mineshafts nearly everywhere you look, even if you don't want too.", "wiki": "https://minecraft.wiki/w/Rail"}
-	{"word": ["s","l","e","e","p"], "about": "Sleeping can skip time to sunrise, giving you the most of the day.", "wiki": "https://minecraft.wiki/w/Bed#Sleeping"}
-	{"word": ["v","a","u","l","t"], "about": "Vaults are found in Trial Chambers and no matter how much you try, vaults cannot be destroyed.", "wiki": "https://minecraft.wiki/w/Vault"}
-	{"word": ["s","m","e","l","t"], "about": "You do this in a furnace when you need ingots or base blocks.", "wiki": "https://minecraft.wiki/w/Smelting"}
-	{"word": ["m","a","g","m","a"], "about": "Magma could be found in nether in 3 different ways! (Plus underwater Magma Blocks)", "wiki": "https://minecraft.wiki/w/Magma_Block"}
-	{"word": ["f","l","e","s","h"], "about": "Rotten flesh will give you food poisoning, but not all of the time...", "wiki": "https://minecraft.wiki/w/Rotten_Flesh"}
-	{"word": ["s","i","g","n","s"], "about": "Signs have two different varients -  hanging and placeable", "wiki": "https://minecraft.wiki/w/Sign"}
-	{"word": ["c","a","k","e","s"], "about": "Cakes have 7 different phases depending on how much you eat.", "wiki": "https://minecraft.wiki/w/Cake"}
+    {"word": ["w","h","e","a","t"], "about": "Wheat is an item primarily obtained by harvesting fully-grown wheat crops. It is used for crafting as well as to feed certain animals.", "wiki": "https://minecraft.wiki/w/Wheat"},
+	{"word": ["m","u","l","e","s"], "about": "Mules are a mix of a donkey and a horse when bred together!", "wiki": "https://minecraft.wiki/w/Mule"},
+	{"word": ["w","i","t","c","h"], "about": "Witches spawn in every biome but the deep dark and the mushroom fields.", "wiki": "https://minecraft.wiki/w/Witch"},
+	{"word": ["t","a","i","g","a"], "about": "The Taiga biome was added all the way back in 1.2.0 with a noticable difference with oak.", "wiki": "https://minecraft.wiki/w/Taiga"},
+	{"word": ["g","r","o","v","e"], "about": "Groves have spruce forests that grow on the side of the mountain it's connected too!", "wiki": "https://minecraft.wiki/w/Mountains#Grove"},
+	{"word": ["s","u","g","a","r"], "about": "Sugar could be used to create speed potions.", "wiki": "https://minecraft.wiki/w/Sugar"},
+	{"word": ["s","n","e","a","k"], "about": "Sneaking can actually increase your hide rate when around mobs.", "wiki": "https://minecraft.wiki/w/Sneaking"},
+	{"word": ["t","r","i","a","l"], "about": "We've all seen it and thought we were in the stronghold at one point.", "wiki": "https://minecraft.wiki/w/Trial_Chambers"},
+	{"word": ["t","r","a","c","k"], "about": "You can find tracks in mineshafts nearly everywhere you look, even if you don't want too.", "wiki": "https://minecraft.wiki/w/Rail"},
+	{"word": ["s","l","e","e","p"], "about": "Sleeping can skip time to sunrise, giving you the most of the day.", "wiki": "https://minecraft.wiki/w/Bed#Sleeping"},
+	{"word": ["v","a","u","l","t"], "about": "Vaults are found in Trial Chambers and no matter how much you try, vaults cannot be destroyed.", "wiki": "https://minecraft.wiki/w/Vault"},
+	{"word": ["s","m","e","l","t"], "about": "You do this in a furnace when you need ingots or base blocks.", "wiki": "https://minecraft.wiki/w/Smelting"},
+	{"word": ["m","a","g","m","a"], "about": "Magma could be found in nether in 3 different ways! (Plus underwater Magma Blocks)", "wiki": "https://minecraft.wiki/w/Magma_Block"},
+	{"word": ["f","l","e","s","h"], "about": "Rotten flesh will give you food poisoning, but not all of the time...", "wiki": "https://minecraft.wiki/w/Rotten_Flesh"},
+	{"word": ["s","i","g","n","s"], "about": "Signs have two different varients -  hanging and placeable", "wiki": "https://minecraft.wiki/w/Sign"},
+	{"word": ["c","a","k","e","s"], "about": "Cakes have 7 different phases depending on how much you eat.", "wiki": "https://minecraft.wiki/w/Cake"},
 	{"word": ["s","t","r","a","y"], "about": "Strays do not naturally spawn from a Spawner in Java Edition.", "wiki": "https://minecraft.wiki/wiki/Stray"}
   ]
 }
